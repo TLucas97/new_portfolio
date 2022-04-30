@@ -115,20 +115,52 @@
           <hr class="line" />
           <div class="pt-7">
             <v-row>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-language-javascript</v-icon> Javascript</h4></v-col>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-vuejs</v-icon> Vue.js</h4></v-col>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-language-javascript</v-icon> Javascript
+                </h4></v-col
+              >
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-vuejs</v-icon> Vue.js
+                </h4></v-col
+              >
             </v-row>
             <v-row>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-language-html5</v-icon> HTML5</h4></v-col>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-nuxt</v-icon> Nuxt.js</h4></v-col>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-language-html5</v-icon> HTML5
+                </h4></v-col
+              >
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-nuxt</v-icon> Nuxt.js
+                </h4></v-col
+              >
             </v-row>
             <v-row>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-language-css3</v-icon> CSS3</h4></v-col>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-vuetify</v-icon> Vuetify.js</h4></v-col>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-language-css3</v-icon> CSS3
+                </h4></v-col
+              >
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-vuetify</v-icon> Vuetify.js
+                </h4></v-col
+              >
             </v-row>
             <v-row>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-sass</v-icon> Sass</h4></v-col>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-bootstrap</v-icon> Bootstrap</h4></v-col>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-sass</v-icon> Sass
+                </h4></v-col
+              >
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-bootstrap</v-icon> Bootstrap
+                </h4></v-col
+              >
             </v-row>
           </div>
         </div>
@@ -137,7 +169,11 @@
           <hr class="line" />
           <div class="pt-7">
             <v-row>
-              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-git</v-icon> Git</h4></v-col>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-git</v-icon> Git
+                </h4></v-col
+              >
               <v-col><h4 class="code-pro pb-4">➤ Figma</h4></v-col>
             </v-row>
             <v-row>
@@ -153,12 +189,12 @@
             <v-system-bar lights-out></v-system-bar>
             <v-carousel
               v-model="currentIndex"
-              :continuous="false"
-              :show-arrows="false"
-              hide-delimiter-background
+              :continuous="true"
+              :show-arrows="true"
+              hide-delimiters
               height="230"
             >
-              <v-carousel-item v-for="(slide, i) in slides" :key="i">
+              <v-carousel-item v-for="(slide, i) in slides" :key="i" @click="openDialog">
                 <v-sheet :color="colors[i]" height="100%" tile>
                   <v-row class="fill-height" align="center" justify="center">
                     <div class="white--text text-center">
@@ -175,7 +211,7 @@
                 </v-sheet>
               </v-carousel-item>
             </v-carousel>
-            <v-list>
+            <v-list height="95">
               <v-list-item>
                 <v-list-item-avatar>
                   <img src="~/static/img/tarcisio.png" alt="" />
@@ -235,6 +271,34 @@
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
+      <!-- Modal projects -->
+      <div>
+        <v-row justify="center">
+          <v-dialog
+            v-model="dialog"
+            fullscreen
+            hide-overlay
+            transition="dialog-bottom-transition"
+          >
+            <v-card>
+              <v-toolbar color="white">
+                <v-btn icon dark @click="dialog = false">
+                  <v-icon color="black">mdi-close</v-icon>
+                </v-btn>
+                <v-toolbar-title class="text--center code-pro"
+                  >Projetos</v-toolbar-title
+                >
+              </v-toolbar>
+              <modal-project1 v-show="modals.modal_1" />
+              <modal-project2 v-show="modals.modal_2" />
+              <modal-project3 v-show="modals.modal_3" />
+              <modal-project4 v-show="modals.modal_4" />
+              <modal-project5 v-show="modals.modal_5" />
+            </v-card>
+          </v-dialog>
+        </v-row>
+      </div>
+      <!-- Modal projects -->
     </v-card>
   </div>
 </template>
@@ -243,6 +307,14 @@
 export default {
   data: () => ({
     currentIndex: 0,
+    dialog: false,
+    modals: {
+      modal_1: false,
+      modal_2: false,
+      modal_3: false,
+      modal_4: false,
+      modal_5: false,
+    },
     drawer: false,
     group: null,
     colors: ['secondary', 'secondary', 'secondary', 'secondary', 'secondary'],
@@ -254,6 +326,46 @@ export default {
       'Weather-app',
     ],
   }),
+  methods: {
+    openDialog() {
+      if (this.currentIndex === 0) {
+        this.dialog = true
+        this.modals.modal_1 = true
+        this.modals.modal_2 = false
+        this.modals.modal_3 = false
+        this.modals.modal_4 = false
+        this.modals.modal_5 = false
+      } else if (this.currentIndex === 1){
+        this.dialog = true
+        this.modals.modal_1 = false
+        this.modals.modal_2 = true
+        this.modals.modal_3 = false
+        this.modals.modal_4 = false
+        this.modals.modal_5 = false
+      } else if (this.currentIndex === 2){
+        this.dialog = true
+        this.modals.modal_1 = false
+        this.modals.modal_2 = false
+        this.modals.modal_3 = true
+        this.modals.modal_4 = false
+        this.modals.modal_5 = false
+      } else if (this.currentIndex === 3){
+        this.dialog = true
+        this.modals.modal_1 = false
+        this.modals.modal_2 = false
+        this.modals.modal_3 = false
+        this.modals.modal_4 = true
+        this.modals.modal_5 = false  
+      } else if (this.currentIndex === 4){
+        this.dialog = true
+        this.modals.modal_1 = false
+        this.modals.modal_2 = false
+        this.modals.modal_3 = false
+        this.modals.modal_4 = false
+        this.modals.modal_5 = true
+      }
+    },
+  },
 }
 </script>
 
