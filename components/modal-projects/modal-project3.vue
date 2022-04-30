@@ -22,7 +22,7 @@
       <hr class="mb-2 mt-2" />
       <a
         target="_blank"
-        href="https://sleepy-leavitt-24ad59.netlify.app/"
+        href="https://github.com/TLucas97/Urna-Customizada"
         class="font-weight-bold"
       >
         ( Clique aqui para acessar )

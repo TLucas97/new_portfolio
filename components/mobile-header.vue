@@ -74,9 +74,8 @@
           <div class="pt-5">
             <p class="code-pro text-justify">
               <strong>• Experiência profissional</strong> <br />
-              -
               <span
-                >Atualmente trabalho como Desenvolvedor Front-end na
+                >- Atualmente trabalho como Desenvolvedor Front-end na
                 <a target="_blank" href="https://www.suthub.com/"
                   ><span class="suthub-text">SUTHUB</span></a
                 >, atuando na criação de aplicações web e fornecendo suporte em
@@ -85,9 +84,8 @@
             </p>
             <p class="code-pro text-justify">
               <strong>• Meu objetivo</strong><br />
-              -
               <span
-                >Como desenvolvedor, fui capaz de perceber a satisfação de
+                >- Como desenvolvedor, fui capaz de perceber a satisfação de
                 causar impacto na resolução de problemas, atuar nesse tipo de
                 ambiente nos permite entender a importância de alcançar
                 objetivos e reconhecer os mesmos com clareza. Foi através dessa
@@ -96,10 +94,9 @@
               >
             </p>
             <p class="code-pro text-justify">
-              <strong>• O início</strong>
-              -
+              <strong>• O início</strong> <br>
               <span
-                >Em 2021 dei início a minha jornada para a carreira na área de
+                >- Em 2021 dei início a minha jornada para a carreira na área de
                 desenvolvimento, desde então tenho trabalhado na criação de
                 aplicações para fins de estudo e no início de 2022 tive a
                 oportunidade de trabalhar em projetos reais. Isso me

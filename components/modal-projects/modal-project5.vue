@@ -21,15 +21,6 @@
       <v-icon x-large color="blue">mdi-language-css3</v-icon>
       <v-icon x-large color="green">mdi-vuejs</v-icon>
 
-      <h2 class="code-pro mt-7">Uso</h2>
-      <hr class="mb-2 mt-2" />
-      <a
-        target="_blank"
-        href="https://sleepy-leavitt-24ad59.netlify.app/"
-        class="font-weight-bold"
-      >
-        ( Versão apenas para desktop )
-      </a>
       <h2 class="code-pro mt-7">Repositório</h2>
       <hr class="mb-2 mt-2" />
       <a
