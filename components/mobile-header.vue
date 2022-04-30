@@ -1,11 +1,22 @@
 <template>
   <div id="header">
     <div id="home"></div>
-    <v-card class="mx-auto overflow-hidden" height="2650">
+    <v-card class="mx-auto overflow-hidden" height="2850">
       <v-app-bar color="white" class="app-bar-fixed">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <v-toolbar-title>
-          <h4 class="code-pro">TARCISIO ALMEIDA</h4>
+          <div class="d-flex justify-space-between align-center">
+            <div>
+              <h6 class="code-pro">TARCISIO ALMEIDA</h6>
+            </div>
+            <div class="d-flex align-center ml-14">
+              <small class="mr-2">PT-BR</small>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/197/197386.png"
+                width="25"
+              />
+            </div>
+          </div>
         </v-toolbar-title>
       </v-app-bar>
       <!-- content -->
@@ -18,10 +29,42 @@
           />
         </div>
         <div class="pt-12 d-flex flex-column">
-          <v-btn dark class="mb-5 text-h5">LINKEDIN</v-btn>
-          <v-btn dark class="mb-5 text-h5">GITHUB</v-btn>
-          <v-btn dark class="mb-5 text-h5">CONTATO</v-btn>
-          <v-btn dark class="mb-5 text-h5">CURRÍCULO</v-btn>
+          <v-btn
+            dark
+            width="210"
+            height="55"
+            class="mb-5 text-h5 d-flex justify-space-between"
+          >
+            <span>LINKEDIN</span>
+            <v-icon>mdi-linkedin</v-icon>
+          </v-btn>
+          <v-btn
+            dark
+            width="210"
+            height="55"
+            class="mb-5 text-h5 d-flex justify-space-between"
+          >
+            <span>GITHUB</span>
+            <v-icon>mdi-github</v-icon>
+          </v-btn>
+          <v-btn
+            dark
+            width="210"
+            height="55"
+            class="mb-5 text-h5 d-flex justify-space-between"
+          >
+            <span>CONTATO</span>
+            <v-icon>mdi-account-box</v-icon>
+          </v-btn>
+          <v-btn
+            dark
+            width="210"
+            height="55"
+            class="mb-5 text-h5 d-flex justify-space-between"
+          >
+            <span>CURRÍCULO</span>
+            <v-icon>mdi-file-account</v-icon>
+          </v-btn>
         </div>
       </div>
       <div class="pt-16 profile-content">
@@ -30,18 +73,40 @@
           <hr class="line" />
           <div class="pt-5">
             <p class="code-pro text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, quas sed. Asperiores ea nam doloribus explicabo,
-              ducimus consectetur atque id quisquam eos. Officiis, voluptas
-              neque? Quos tempora itaque ullam repellendus beatae. Nostrum iste
-              illum quis vitae voluptas ipsa nisi sunt natus commodi fuga.
-              Recusandae iusto minus dolores ab eaque necessitatibus at, officia
-              iure error in vitae doloremque eveniet voluptatibus unde nihil
-              quibusdam pariatur voluptate culpa mollitia totam. Tenetur qui,
-              temporibus deleniti laboriosam laborum eius facilis. Asperiores
-              doloribus libero saepe quasi assumenda! Iure fuga, optio,
-              doloremque reiciendis aut eum nesciunt natus ut pariatur odio modi
-              est blanditiis dicta nobis velit mollitia.
+              <strong>• Experiência profissional</strong> <br />
+              -
+              <span
+                >Atualmente trabalho como Desenvolvedor Front-end na
+                <a target="_blank" href="https://www.suthub.com/"
+                  ><span class="suthub-text">SUTHUB</span></a
+                >, atuando na criação de aplicações web e fornecendo suporte em
+                projetos contínuos.</span
+              >
+            </p>
+            <p class="code-pro text-justify">
+              <strong>• Meu objetivo</strong><br />
+              -
+              <span
+                >Como desenvolvedor, fui capaz de perceber a satisfação de
+                causar impacto na resolução de problemas, atuar nesse tipo de
+                ambiente nos permite entender a importância de alcançar
+                objetivos e reconhecer os mesmos com clareza. Foi através dessa
+                percepção que decidi tornar como objetivo de vida resolver
+                problemas de forma cada vez mais eficiente.</span
+              >
+            </p>
+            <p class="code-pro text-justify">
+              <strong>• O início</strong>
+              -
+              <span
+                >Em 2021 dei início a minha jornada para a carreira na área de
+                desenvolvimento, desde então tenho trabalhado na criação de
+                aplicações para fins de estudo e no início de 2022 tive a
+                oportunidade de trabalhar em projetos reais. Isso me
+                possibilitou alavancar meus estudos e me motivar a cada vez mais
+                buscar conhecimento e explorar as possibilidades que cada
+                tecnologia me permitia obter.</span
+              >
             </p>
           </div>
         </div>
@@ -50,20 +115,20 @@
           <hr class="line" />
           <div class="pt-7">
             <v-row>
-              <v-col><h4 class="code-pro pb-4">➤ Javascript</h4></v-col>
-              <v-col><h4 class="code-pro pb-4">➤ Vue.js</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-language-javascript</v-icon> Javascript</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-vuejs</v-icon> Vue.js</h4></v-col>
             </v-row>
             <v-row>
-              <v-col><h4 class="code-pro pb-4">➤ HTML5</h4></v-col>
-              <v-col><h4 class="code-pro pb-4">➤ Nuxt.js</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-language-html5</v-icon> HTML5</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-nuxt</v-icon> Nuxt.js</h4></v-col>
             </v-row>
             <v-row>
-              <v-col><h4 class="code-pro pb-4">➤ CSS3</h4></v-col>
-              <v-col><h4 class="code-pro pb-4">➤ Vuetify.js</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-language-css3</v-icon> CSS3</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-vuetify</v-icon> Vuetify.js</h4></v-col>
             </v-row>
             <v-row>
-              <v-col><h4 class="code-pro pb-4">➤ Sass</h4></v-col>
-              <v-col><h4 class="code-pro pb-4">➤ Bootstrap</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-sass</v-icon> Sass</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-bootstrap</v-icon> Bootstrap</h4></v-col>
             </v-row>
           </div>
         </div>
@@ -72,7 +137,7 @@
           <hr class="line" />
           <div class="pt-7">
             <v-row>
-              <v-col><h4 class="code-pro pb-4">➤ Git</h4></v-col>
+              <v-col><h4 class="code-pro pb-4"><v-icon>mdi-git</v-icon> Git</h4></v-col>
               <v-col><h4 class="code-pro pb-4">➤ Figma</h4></v-col>
             </v-row>
             <v-row>
@@ -87,20 +152,30 @@
           <v-card elevation="24" max-width="444" class="mx-auto mt-7">
             <v-system-bar lights-out></v-system-bar>
             <v-carousel
+              v-model="currentIndex"
               :continuous="false"
               :show-arrows="false"
               hide-delimiter-background
-              height="300"
+              height="230"
             >
               <v-carousel-item v-for="(slide, i) in slides" :key="i">
                 <v-sheet :color="colors[i]" height="100%" tile>
                   <v-row class="fill-height" align="center" justify="center">
-                    <div class="text-h2">{{ slide }}</div>
+                    <div class="white--text text-center">
+                      <h1>{{ slide }}</h1>
+                      <v-icon color="yellow" class="pb-2"
+                        >mdi-lightbulb-on</v-icon
+                      >
+                      <br />
+                      <small class="grey--text"
+                        >Clique para mais detalhes</small
+                      >
+                    </div>
                   </v-row>
                 </v-sheet>
               </v-carousel-item>
             </v-carousel>
-            <v-list two-line>
+            <v-list>
               <v-list-item>
                 <v-list-item-avatar>
                   <img src="~/static/img/tarcisio.png" alt="" />
@@ -157,7 +232,7 @@
                 <v-list-item-title>Projetos</v-list-item-title>
               </v-list-item>
             </a>
-        </v-list-item-group>
+          </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
     </v-card>
@@ -167,16 +242,17 @@
 <script>
 export default {
   data: () => ({
+    currentIndex: 0,
     drawer: false,
     group: null,
-    colors: [
-      'green',
-      'secondary',
-      'yellow darken-4',
-      'red lighten-2',
-      'orange darken-1',
+    colors: ['secondary', 'secondary', 'secondary', 'secondary', 'secondary'],
+    slides: [
+      'Covid-Tracker',
+      'HarryPotter-Wiki',
+      'Urna eletrônica',
+      'Brawstars-Data',
+      'Weather-app',
     ],
-    slides: ['First', 'Second', 'Third', 'Fourth', 'Fifth'],
   }),
 }
 </script>
@@ -207,5 +283,10 @@ export default {
 .app-bar-fixed {
   position: fixed;
   z-index: 1;
+}
+
+.suthub-text {
+  font-weight: bold;
+  color: #009187;
 }
 </style>
