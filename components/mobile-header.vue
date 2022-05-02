@@ -3,13 +3,12 @@
     <div id="home"></div>
     <v-card class="mx-auto overflow-hidden" height="2850">
       <v-app-bar color="white" class="app-bar-fixed">
-        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-        <v-toolbar-title>
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <h6 class="code-pro">TARCISIO ALMEIDA</h6>
-            </div>
-            <div class="d-flex align-center ml-14">
+        <div class="d-flex align-center justify-space-between" style="width: 100%">
+          <div class="d-flex align-center">
+            <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+            <h3 class="code-pro">TARCISIO ALMEIDA</h3>
+          </div>
+            <div class="d-flex align-center">
               <small class="mr-2">PT-BR</small>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/197/197386.png"
@@ -17,7 +16,6 @@
               />
             </div>
           </div>
-        </v-toolbar-title>
       </v-app-bar>
       <!-- content -->
       <div class="inside-content pt-16">
@@ -94,7 +92,7 @@
               >
             </p>
             <p class="code-pro text-justify">
-              <strong>• O início</strong> <br>
+              <strong>• O início</strong> <br />
               <span
                 >- Em 2021 dei início a minha jornada para a carreira na área de
                 desenvolvimento, desde então tenho trabalhado na criação de
@@ -189,18 +187,25 @@
               :continuous="true"
               :show-arrows="true"
               hide-delimiters
-              height="230"
+              height="auto"
             >
-              <v-carousel-item v-for="(slide, i) in slides" :key="i" @click="openDialog">
-                <v-sheet :color="colors[i]" height="100%" tile>
+              <v-carousel-item
+                v-for="(slide, i) in slides"
+                :key="i"
+                @click="openDialog"
+              >
+                <v-sheet :color="colors[i]" height="auto" tile>
                   <v-row class="fill-height" align="center" justify="center">
-                    <div class="white--text text-center">
+                    <div
+                      class="white--text text-center d-flex align-center justify-center flex-column"
+                      style="height: 250px"
+                    >
                       <h1>{{ slide }}</h1>
                       <v-icon color="yellow" class="pb-2"
                         >mdi-lightbulb-on</v-icon
                       >
                       <br />
-                      <small class="grey--text"
+                      <small class="white--text"
                         >Clique para mais detalhes</small
                       >
                     </div>
@@ -332,28 +337,28 @@ export default {
         this.modals.modal_3 = false
         this.modals.modal_4 = false
         this.modals.modal_5 = false
-      } else if (this.currentIndex === 1){
+      } else if (this.currentIndex === 1) {
         this.dialog = true
         this.modals.modal_1 = false
         this.modals.modal_2 = true
         this.modals.modal_3 = false
         this.modals.modal_4 = false
         this.modals.modal_5 = false
-      } else if (this.currentIndex === 2){
+      } else if (this.currentIndex === 2) {
         this.dialog = true
         this.modals.modal_1 = false
         this.modals.modal_2 = false
         this.modals.modal_3 = true
         this.modals.modal_4 = false
         this.modals.modal_5 = false
-      } else if (this.currentIndex === 3){
+      } else if (this.currentIndex === 3) {
         this.dialog = true
         this.modals.modal_1 = false
         this.modals.modal_2 = false
         this.modals.modal_3 = false
         this.modals.modal_4 = true
-        this.modals.modal_5 = false  
-      } else if (this.currentIndex === 4){
+        this.modals.modal_5 = false
+      } else if (this.currentIndex === 4) {
         this.dialog = true
         this.modals.modal_1 = false
         this.modals.modal_2 = false
