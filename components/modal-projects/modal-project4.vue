@@ -26,7 +26,7 @@
         href="https://brawlegends-data.netlify.app/"
         class="font-weight-bold"
       >
-        ( Versão apenas para desktop )
+        Clique aqui para testar (Disponível apenas para desktop)
       </a>
 
       <h2 class="code-pro mt-7">Repositório</h2>
@@ -36,7 +36,7 @@
         href="https://github.com/TLucas97/brawstars-data-project/"
         class="font-weight-bold"
       >
-        ( Clique aqui para acessar )
+        Clique aqui para acessar
       </a>
     </div>
   </div>

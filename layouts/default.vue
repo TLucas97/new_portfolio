@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <mobile-header />
+    <mobile-layolt class="d-md-none" />
     <Nuxt />
     <mobile-footer />
   </v-app>
@@ -18,14 +18,18 @@ export default {
   font-family: 'Source Code Pro', monospace;
 }
 
-.line{
+.line {
   background: black;
   height: 5px;
-  width: 250px
+  width: 250px;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>

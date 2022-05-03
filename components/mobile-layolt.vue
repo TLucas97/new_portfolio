@@ -56,12 +56,13 @@
       <div class="inside-content pt-16">
         <div class="pt-10">
           <img
-            src="~/static/img/tarcisio.png"
+            src="~/static/img/tarcisio2.png"
             width="200"
             class="profile-img"
           />
         </div>
-        <div class="pt-12 d-flex flex-column">
+        <alternativa-socials class="alternative" />
+        <div class="pt-12 d-flex flex-column socials">
           <a
             target="_blank"
             href="https://www.linkedin.com/in/tarcisio-almeida-0a5577207/"
@@ -149,8 +150,9 @@
             </p>
           </div>
         </div>
-        <div class="pt-10">
-          <h1 id="techs" class="code-pro">Tecnologias</h1>
+        <div id="techs"></div>
+        <div class="pt-10 d-sm-none">
+          <h1 class="code-pro">Tecnologias</h1>
           <hr class="line" />
           <div class="pt-7">
             <v-row>
@@ -210,6 +212,7 @@
             </v-row>
           </div>
         </div>
+        <tech-icons />
         <div class="pt-10">
           <h1 class="code-pro">Outros</h1>
           <hr class="line" />
@@ -432,13 +435,11 @@ export default {
 }
 
 .profile-img {
-  border-radius: 15px;
+  border-radius: 50%;
+  border: 1px solid black;
   -webkit-box-shadow: 0px 9px 0px 6px rgba(0, 0, 0, 0.1),
-    0px 12px 0px 8px rgba(0, 0, 0, 0.1), 0px 15px 0px 10px rgba(0, 0, 0, 0.1),
-    0px 18px 0px 12px rgba(0, 0, 0, 0.1), 50px -50px 50px 50px rgba(0, 0, 0, 0);
-  box-shadow: 0px 9px 0px 6px rgba(0, 0, 0, 0.1),
-    0px 12px 0px 8px rgba(0, 0, 0, 0.1), 0px 15px 0px 10px rgba(0, 0, 0, 0.1),
-    0px 18px 0px 12px rgba(0, 0, 0, 0.1), 50px -50px 50px 50px rgba(0, 0, 0, 0);
+    0px 12px 0px 8px rgba(0, 0, 0, 0.1), 0px 15px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 9px 0px 6px rgba(0, 0, 0, 0.1);
 }
 
 .profile-content {
@@ -454,5 +455,19 @@ export default {
 .suthub-text {
   font-weight: bold;
   color: #009187;
+}
+
+/* RESPONSIVENESS */
+
+@media (min-width: 800px){
+  .socials{
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px){
+  .alternative{
+    display: none !important;
+  }
 }
 </style>

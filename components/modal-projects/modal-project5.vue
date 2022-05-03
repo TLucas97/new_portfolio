@@ -28,7 +28,7 @@
         href="https://github.com/TLucas97/clima-weather-app"
         class="font-weight-bold"
       >
-        ( Clique aqui para acessar )
+        Clique aqui para acessar
       </a>
     </div>
   </div>

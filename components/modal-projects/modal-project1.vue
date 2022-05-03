@@ -28,7 +28,7 @@
         href="https://sleepy-leavitt-24ad59.netlify.app/"
         class="font-weight-bold"
       >
-        ( Versão apenas para desktop )
+        Clique aqui para testar (Disponível apenas para desktop)
       </a>
       <h2 class="code-pro mt-7">Repositório</h2>
       <hr class="mb-2 mt-2" />
@@ -37,7 +37,7 @@
         href="https://github.com/TLucas97/covid-tracker"
         class="font-weight-bold"
       >
-        ( Clique aqui para acessar )
+        Clique aqui para acessar
       </a>
     </div>
   </div>
