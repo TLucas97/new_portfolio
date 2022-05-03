@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <div id="home"></div>
-    <v-card class="mx-auto overflow-hidden">
+    <v-card class="mx-auto overflow-hidden pb-16">
       <v-app-bar color="white" class="app-bar-fixed">
         <div
           class="d-flex align-center justify-space-between"
@@ -9,7 +9,7 @@
         >
           <div class="d-flex align-center">
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-            <h3 class="code-pro">TARCISIO ALMEIDA</h3>
+            <h5 class="code-pro">TARCISIO ALMEIDA</h5>
           </div>
           <div class="d-flex align-center">
             <!-- COUNTRY SELECTION -->
@@ -20,7 +20,7 @@
                   <img
                     src="https://cdn-icons.flaticon.com/png/512/4087/premium/4087479.png?token=exp=1651538089~hmac=04ae174cdf399778957c05135bc5b44c"
                     alt=""
-                    width="30"
+                    width="20"
                   />
                   <v-icon right> mdi-chevron-down </v-icon>
                 </v-btn>
@@ -41,7 +41,7 @@
                         titles.name
                       }}</span>
                       <div>
-                        <img :src="titles.pic" width="30" />
+                        <img :src="titles.pic" width="20" />
                       </div>
                     </v-btn>
                   </v-list-item>
@@ -56,7 +56,7 @@
       <div class="inside-content pt-16">
         <div class="pt-10">
           <img
-            src="~/static/img/tarcisio2.png"
+            src="~/static/img/tarcisio.png"
             width="200"
             class="profile-img"
           />
@@ -115,13 +115,15 @@
           <hr class="line" />
           <div class="pt-5">
             <p class="code-pro text-justify">
-              <strong>• Experiência profissional</strong> <br />
+              <strong>• O início</strong> <br />
               <span
-                >- Atualmente trabalho como Desenvolvedor Front-end na
-                <a target="_blank" href="https://www.suthub.com/"
-                  ><span class="suthub-text">SUTHUB</span></a
-                >, atuando na criação de aplicações web e fornecendo suporte em
-                projetos contínuos.</span
+                >- Em 2021 dei início a minha jornada para a carreira na área de
+                desenvolvimento, desde então tenho trabalhado na criação de
+                aplicações para fins de estudo e no início de 2022 tive a
+                oportunidade de trabalhar em projetos reais. Isso me
+                possibilitou alavancar meus estudos e me motivar a cada vez mais
+                buscar conhecimento e explorar as possibilidades que cada
+                tecnologia me permitia obter.</span
               >
             </p>
             <p class="code-pro text-justify">
@@ -136,15 +138,13 @@
               >
             </p>
             <p class="code-pro text-justify">
-              <strong>• O início</strong> <br />
+              <strong>• Experiência profissional</strong> <br />
               <span
-                >- Em 2021 dei início a minha jornada para a carreira na área de
-                desenvolvimento, desde então tenho trabalhado na criação de
-                aplicações para fins de estudo e no início de 2022 tive a
-                oportunidade de trabalhar em projetos reais. Isso me
-                possibilitou alavancar meus estudos e me motivar a cada vez mais
-                buscar conhecimento e explorar as possibilidades que cada
-                tecnologia me permitia obter.</span
+                >- Atualmente trabalho como Desenvolvedor Front-end na
+                <a target="_blank" href="https://www.suthub.com/"
+                  ><span class="suthub-text">SUTHUB</span></a
+                >, atuando na criação de aplicações web e fornecendo suporte em
+                projetos contínuos.</span
               >
             </p>
           </div>
