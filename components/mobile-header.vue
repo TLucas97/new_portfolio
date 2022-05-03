@@ -1,27 +1,49 @@
 <template>
   <div id="header">
     <div id="home"></div>
-    <v-card class="mx-auto overflow-hidden" height="2850">
+    <v-card class="mx-auto overflow-hidden">
       <v-app-bar color="white" class="app-bar-fixed">
-        <div class="d-flex align-center justify-space-between" style="width: 100%">
+        <div
+          class="d-flex align-center justify-space-between"
+          style="width: 100%"
+        >
           <div class="d-flex align-center">
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
             <h3 class="code-pro">TARCISIO ALMEIDA</h3>
           </div>
-            <div class="d-flex align-center">
-              <small class="mr-2">PT-BR</small>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/197/197386.png"
-                width="25"
-              />
-            </div>
+          <div class="d-flex align-center">
+            <!-- COUNTRY SELECTION -->
+            <v-menu offset-y close-on-click>
+              <template #activator="{ on }">
+                <v-btn class="black--text" elevation="0" text v-on="on">
+                  <span class="pr-2">PT-BR</span>
+                  <img src="https://cdn-icons.flaticon.com/png/512/4087/premium/4087479.png?token=exp=1651538089~hmac=04ae174cdf399778957c05135bc5b44c" alt="" width="30">
+                  <v-icon right> mdi-chevron-down </v-icon>
+                </v-btn>
+              </template>
+
+              <v-list>
+                <v-list-item-group v-model="countriesLang.id">
+                  <v-list-item v-for="(titles, idx) in countriesLang" :key="idx" value="titles">
+                          <v-btn text class="black--text d-flex justify-space-between align-center">
+                            <span class="pr-2 black--text font-weight-bold">{{ titles.name }}</span>
+                            <div>
+                              <img :src="titles.pic" width="30">
+                            </div>
+                          </v-btn>
+                  </v-list-item>
+                </v-list-item-group>
+              </v-list>
+            </v-menu>
+            <!-- COUNTRY SELECTION -->
           </div>
+        </div>
       </v-app-bar>
       <!-- content -->
       <div class="inside-content pt-16">
         <div class="pt-10">
           <img
-            src="~/static/img/tarcisio.png"
+            src="~/static/img/tarcisio2.png"
             width="200"
             class="profile-img"
           />
@@ -157,6 +179,13 @@
                 </h4></v-col
               >
             </v-row>
+            <v-row>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon>mdi-git</v-icon> Git
+                </h4></v-col
+              >
+            </v-row>
           </div>
         </div>
         <div class="pt-10">
@@ -164,16 +193,11 @@
           <hr class="line" />
           <div class="pt-7">
             <v-row>
-              <v-col
-                ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-git</v-icon> Git
-                </h4></v-col
-              >
-              <v-col><h4 class="code-pro pb-4">➤ Figma</h4></v-col>
-            </v-row>
-            <v-row>
               <v-col><h4 class="code-pro pb-4">➤ SCRUM</h4></v-col>
               <v-col><h4 class="code-pro pb-4">➤ Adobe XD</h4></v-col>
+            </v-row>
+            <v-row>
+              <v-col><h4 class="code-pro pb-4">➤ Figma</h4></v-col>
             </v-row>
           </div>
         </div>
@@ -186,7 +210,6 @@
               v-model="currentIndex"
               :continuous="true"
               :show-arrows="true"
-              hide-delimiters
               height="auto"
             >
               <v-carousel-item
@@ -309,6 +332,13 @@
 export default {
   data: () => ({
     currentIndex: 0,
+    countriesLang: [
+      {
+        id: 1,
+        name: 'EN-US',
+        pic: 'https://cdn-icons-png.flaticon.com/512/206/206626.png',
+      }
+    ],
     dialog: false,
     modals: {
       modal_1: false,
