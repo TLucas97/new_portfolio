@@ -62,7 +62,7 @@
           />
         </div>
         <alternativa-socials class="alternative" />
-        <div class="pt-12 d-flex flex-column socials">
+        <div class="pt-12 socials">
           <a
             target="_blank"
             href="https://www.linkedin.com/in/tarcisio-almeida-0a5577207/"
