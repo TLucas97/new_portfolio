@@ -1,22 +1,24 @@
 <template>
   <div id="header">
     <div id="home"></div>
-    <v-card class="mx-auto overflow-hidden pb-16">
-      <v-app-bar color="white" class="app-bar-fixed">
+    <v-card class="mx-auto overflow-hidden pb-16" :class="dark_mode" style="border-radius: 0;">
+      <v-app-bar color="white" class="app-bar-fixed" :class="dark_mode">
         <div
           class="d-flex align-center justify-space-between"
           style="width: 100%"
         >
           <div class="d-flex align-center">
-            <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-            <h5 class="code-pro" @click="translate('subText1')">{{ translate("mainName") }}</h5>
+            <v-app-bar-nav-icon :class="dark_mode" @click="drawer = true"></v-app-bar-nav-icon>
+            <h5 class="code-pro" @click="translate('subText1')">
+              {{ translate('mainName') }}
+            </h5>
           </div>
           <div class="d-flex align-center">
             <!-- COUNTRY SELECTION -->
             <v-menu offset-y close-on-click>
               <template #activator="{ on }">
-                <v-btn class="black--text" elevation="0" text v-on="on">
-                  <span class="pr-2">{{ translate("currentName") }}</span>
+                <v-btn elevation="0" text v-on="on">
+                  <span class="pr-2" :class="dark_mode">{{ translate('currentName') }}</span>
                   <img :src="translate('currentFlag')" alt="" width="20" />
                   <v-icon right> mdi-chevron-down </v-icon>
                 </v-btn>
@@ -29,7 +31,7 @@
                       style="width: 100%"
                       class="font-weight-bold d-flex align-center justify-space-around"
                       @click="changeLang"
-                      >{{ translate("langChange") }}
+                      >{{ translate('langChange') }}
                       <img :src="translate('otherFlag')" width="20" />
                     </small>
                   </v-list-item>
@@ -83,7 +85,7 @@
               height="55"
               class="mb-5 text-h5 d-flex justify-space-between"
             >
-              <span>{{ translate("socialsContact") }}</span>
+              <span>{{ translate('socialsContact') }}</span>
               <v-icon>mdi-account-box</v-icon>
             </v-btn>
           </a>
@@ -93,88 +95,88 @@
             height="55"
             class="mb-5 text-h5 d-flex justify-space-between"
           >
-            <span>{{ translate("socialsCV") }}</span>
+            <span>{{ translate('socialsCV') }}</span>
             <v-icon>mdi-file-account</v-icon>
           </v-btn>
         </div>
       </div>
       <div class="pt-16 profile-content">
         <div>
-          <h1 id="about-me" class="code-pro">{{ translate("aboutTitle") }}</h1>
+          <h1 id="about-me" class="code-pro">{{ translate('aboutTitle') }}</h1>
           <hr class="line" />
           <div class="pt-5">
             <p class="code-pro text-justify">
-              <strong>{{ translate("subTitle1") }}</strong> <br />
-              <span>{{ translate("subText1") }}</span>
+              <strong>{{ translate('subTitle1') }}</strong> <br />
+              <span>{{ translate('subText1') }}</span>
             </p>
             <p class="code-pro text-justify">
-              <strong>{{ translate("subTitle2") }}</strong
+              <strong>{{ translate('subTitle2') }}</strong
               ><br />
-              <span>{{ translate("subText2") }}</span>
+              <span>{{ translate('subText2') }}</span>
             </p>
             <p class="code-pro text-justify">
-              <strong>{{ translate("subTitle3") }}</strong> <br />
-              <span>{{ translate("subText3") }}</span>
+              <strong>{{ translate('subTitle3') }}</strong> <br />
+              <span>{{ translate('subText3') }}</span>
             </p>
           </div>
         </div>
         <div id="techs"></div>
         <div class="pt-10 d-sm-none">
-          <h1 class="code-pro">{{ translate("techTitle") }}</h1>
+          <h1 class="code-pro">{{ translate('techTitle') }}</h1>
           <hr class="line" />
           <div class="pt-7">
             <v-row>
               <v-col
                 ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-language-javascript</v-icon> Javascript
+                  <v-icon :class="dark_mode">mdi-language-javascript</v-icon> Javascript
                 </h4></v-col
               >
               <v-col
                 ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-vuejs</v-icon> Vue.js
-                </h4></v-col
-              >
-            </v-row>
-            <v-row>
-              <v-col
-                ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-language-html5</v-icon> HTML5
-                </h4></v-col
-              >
-              <v-col
-                ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-nuxt</v-icon> Nuxt.js
+                  <v-icon :class="dark_mode">mdi-vuejs</v-icon> Vue.js
                 </h4></v-col
               >
             </v-row>
             <v-row>
               <v-col
                 ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-language-css3</v-icon> CSS3
+                  <v-icon :class="dark_mode">mdi-language-html5</v-icon> HTML5
                 </h4></v-col
               >
               <v-col
                 ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-vuetify</v-icon> Vuetify.js
-                </h4></v-col
-              >
-            </v-row>
-            <v-row>
-              <v-col
-                ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-sass</v-icon> Sass
-                </h4></v-col
-              >
-              <v-col
-                ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-bootstrap</v-icon> Bootstrap
+                  <v-icon :class="dark_mode">mdi-nuxt</v-icon> Nuxt.js
                 </h4></v-col
               >
             </v-row>
             <v-row>
               <v-col
                 ><h4 class="code-pro pb-4">
-                  <v-icon>mdi-git</v-icon> Git
+                  <v-icon :class="dark_mode">mdi-language-css3</v-icon> CSS3
+                </h4></v-col
+              >
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon :class="dark_mode">mdi-vuetify</v-icon> Vuetify.js
+                </h4></v-col
+              >
+            </v-row>
+            <v-row>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon :class="dark_mode">mdi-sass</v-icon> Sass
+                </h4></v-col
+              >
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon :class="dark_mode">mdi-bootstrap</v-icon> Bootstrap
+                </h4></v-col
+              >
+            </v-row>
+            <v-row>
+              <v-col
+                ><h4 class="code-pro pb-4">
+                  <v-icon :class="dark_mode">mdi-git</v-icon> Git
                 </h4></v-col
               >
             </v-row>
@@ -182,7 +184,7 @@
         </div>
         <tech-icons class="forced-none" />
         <div class="pt-10">
-          <h1 class="code-pro">{{ translate("othersTitle") }}</h1>
+          <h1 class="code-pro">{{ translate('othersTitle') }}</h1>
           <hr class="line" />
           <div class="pt-7">
             <v-row>
@@ -195,7 +197,9 @@
           </div>
         </div>
         <div class="pt-10">
-          <h1 id="projects" class="code-pro">{{ translate("projectsTitle") }}</h1>
+          <h1 id="projects" class="code-pro">
+            {{ translate('projectsTitle') }}
+          </h1>
           <hr class="line" />
           <v-card elevation="24" max-width="444" class="mx-auto mt-7">
             <v-system-bar lights-out></v-system-bar>
@@ -221,7 +225,9 @@
                         >mdi-lightbulb-on</v-icon
                       >
                       <br />
-                      <small class="white--text">{{ translate("moreDetails") }}</small>
+                      <small class="white--text">{{
+                        translate('moreDetails')
+                      }}</small>
                     </div>
                   </v-row>
                 </v-sheet>
@@ -235,7 +241,7 @@
                 <v-list-item-content>
                   <v-list-item-title>Tarcísio Almeida</v-list-item-title>
                   <v-list-item-title class="font-weight-bold"
-                    >• {{ translate("projectslilTitle") }}</v-list-item-title
+                    >• {{ translate('projectslilTitle') }}</v-list-item-title
                   >
                 </v-list-item-content>
               </v-list-item>
@@ -249,41 +255,56 @@
         absolute
         temporary
         class="app-bar-fixed"
+        :class="dark_mode"
       >
         <v-list>
           <v-list-item-group v-model="group">
             <a href="#home">
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon>mdi-home</v-icon>
+                  <v-icon :class="dark_mode">mdi-home</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>Home</v-list-item-title>
+                <v-list-item-title :class="dark_mode">Home</v-list-item-title>
               </v-list-item>
             </a>
             <a href="#about-me">
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon>mdi-account-alert</v-icon>
+                  <v-icon :class="dark_mode">mdi-account-alert</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>{{ translate("headerAbout") }}</v-list-item-title>
+                <v-list-item-title :class="dark_mode">{{
+                  translate('headerAbout')
+                }}</v-list-item-title>
               </v-list-item>
             </a>
             <a href="#techs">
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon>mdi-language-javascript</v-icon>
+                  <v-icon :class="dark_mode">mdi-language-javascript</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>{{ translate("headerTech") }}</v-list-item-title>
+                <v-list-item-title :class="dark_mode">{{
+                  translate('headerTech')
+                }}</v-list-item-title>
               </v-list-item>
             </a>
             <a href="#projects">
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon>mdi-lightbulb-on</v-icon>
+                  <v-icon :class="dark_mode">mdi-account-hard-hat</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>{{ translate("headerProjects") }}</v-list-item-title>
+                <v-list-item-title :class="dark_mode">{{
+                  translate('headerProjects')
+                }}</v-list-item-title>
               </v-list-item>
             </a>
+            <v-list-item @click="darkMode">
+              <v-list-item-icon>
+                <v-icon :class="dark_mode">mdi-{{lightbulb}}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title :class="dark_mode">
+                Dark mode
+              </v-list-item-title>
+            </v-list-item>
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
@@ -327,6 +348,8 @@ export default {
   mixins: [en, ptbr],
   data: () => ({
     currentIndex: 0,
+    lightbulb: 'lightbulb-on',
+    dark_mode: '',
     lang: 'en',
     countriesLang: [
       {
@@ -394,20 +417,34 @@ export default {
       }
     },
     translate(prop) {
-      return this[this.lang][prop];
+      return this[this.lang][prop]
     },
-    changeLang(){
-      if (this.lang === 'en'){
+    changeLang() {
+      if (this.lang === 'en') {
         this.lang = 'ptbr'
-      } else if (this.lang === 'ptbr'){
+      } else if (this.lang === 'ptbr') {
         this.lang = 'en'
       }
-    }
+    },
+    darkMode() {
+      if (this.dark_mode === '' && this.lightbulb === 'lightbulb-on'){
+        this.dark_mode = 'dark-mode'
+        this.lightbulb = 'lightbulb-off'
+      } else if (this.dark_mode === 'dark-mode' && this.lightbulb === 'lightbulb-off'){
+        this.dark_mode = ''
+        this.lightbulb = 'lightbulb-on'
+      }
+    },
   },
 }
 </script>
 
 <style scoped>
+.dark-mode {
+  background: #212121 !important;
+  color: white !important;
+}
+
 .inside-content {
   display: flex;
   justify-content: center;
