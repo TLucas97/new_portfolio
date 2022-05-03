@@ -6,6 +6,7 @@
         <div
           class="d-flex align-center justify-space-between"
           style="width: 100%"
+          :class="dark_mode"
         >
           <div class="d-flex align-center">
             <v-app-bar-nav-icon :class="dark_mode" @click="drawer = true"></v-app-bar-nav-icon>
@@ -20,7 +21,7 @@
                 <v-btn elevation="0" text v-on="on">
                   <span class="pr-2" :class="dark_mode">{{ translate('currentName') }}</span>
                   <img :src="translate('currentFlag')" alt="" width="20" />
-                  <v-icon right> mdi-chevron-down </v-icon>
+                  <v-icon :class="dark_mode" right> mdi-chevron-down </v-icon>
                 </v-btn>
               </template>
 
