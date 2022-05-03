@@ -2,11 +2,10 @@
   <div id="header">
     <div id="home"></div>
     <v-card class="mx-auto overflow-hidden pb-16" :class="dark_mode" style="border-radius: 0;">
-      <v-app-bar color="white" class="app-bar-fixed" :class="dark_mode">
+      <v-app-bar class="app-bar-fixed" :class="dark_mode">
         <div
           class="d-flex align-center justify-space-between"
           style="width: 100%"
-          :class="dark_mode"
         >
           <div class="d-flex align-center">
             <v-app-bar-nav-icon :class="dark_mode" @click="drawer = true"></v-app-bar-nav-icon>
