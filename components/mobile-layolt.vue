@@ -458,15 +458,14 @@ export default {
 }
 
 /* RESPONSIVENESS */
-
-@media (min-width: 800px){
-  .socials{
+@media (max-width: 800px){
+  .alternative{
     display: none !important;
   }
 }
 
-@media (max-width: 800px){
-  .alternative{
+@media (min-width: 800px){
+  .socials{
     display: none !important;
   }
 }
