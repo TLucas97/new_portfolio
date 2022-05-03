@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-12 d-flex flex-column">
+  <div class="pt-12 forced-layolt">
     <v-row>
       <v-col>
         <a
@@ -59,3 +59,11 @@
     </v-row>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 800px) {
+  .forced-layolt {
+    display: none !important;
+  }
+}
+</style>
