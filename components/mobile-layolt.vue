@@ -376,11 +376,11 @@ export default {
     group: null,
     colors: ['secondary', 'secondary', 'secondary', 'secondary', 'secondary'],
     slides: [
-      'Covid-Tracker',
-      'HarryPotter-Wiki',
+      'Covid Tracker',
+      'HarryPotter Wiki',
       'Urna eletrônica',
-      'Brawstars-Data',
-      'Weather-app',
+      'Brawstars Data',
+      'Weather app',
     ],
   }),
   methods: {
