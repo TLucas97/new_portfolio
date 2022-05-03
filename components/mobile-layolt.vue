@@ -212,7 +212,7 @@
             </v-row>
           </div>
         </div>
-        <tech-icons />
+        <tech-icons class="forced-none" />
         <div class="pt-10">
           <h1 class="code-pro">Outros</h1>
           <hr class="line" />
@@ -475,6 +475,12 @@ export default {
 
   .alternative{
     display: block !important;
+  }
+}
+
+@media (max-width: 600px){
+  .forced-none{
+    display: none !important;
   }
 }
 </style>
