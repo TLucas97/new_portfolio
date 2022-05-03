@@ -17,20 +17,33 @@
               <template #activator="{ on }">
                 <v-btn class="black--text" elevation="0" text v-on="on">
                   <span class="pr-2">PT-BR</span>
-                  <img src="https://cdn-icons.flaticon.com/png/512/4087/premium/4087479.png?token=exp=1651538089~hmac=04ae174cdf399778957c05135bc5b44c" alt="" width="30">
+                  <img
+                    src="https://cdn-icons.flaticon.com/png/512/4087/premium/4087479.png?token=exp=1651538089~hmac=04ae174cdf399778957c05135bc5b44c"
+                    alt=""
+                    width="30"
+                  />
                   <v-icon right> mdi-chevron-down </v-icon>
                 </v-btn>
               </template>
 
               <v-list>
                 <v-list-item-group v-model="countriesLang.id">
-                  <v-list-item v-for="(titles, idx) in countriesLang" :key="idx" value="titles">
-                          <v-btn text class="black--text d-flex justify-space-between align-center">
-                            <span class="pr-2 black--text font-weight-bold">{{ titles.name }}</span>
-                            <div>
-                              <img :src="titles.pic" width="30">
-                            </div>
-                          </v-btn>
+                  <v-list-item
+                    v-for="(titles, idx) in countriesLang"
+                    :key="idx"
+                    value="titles"
+                  >
+                    <v-btn
+                      text
+                      class="black--text d-flex justify-space-between align-center"
+                    >
+                      <span class="pr-2 black--text font-weight-bold">{{
+                        titles.name
+                      }}</span>
+                      <div>
+                        <img :src="titles.pic" width="30" />
+                      </div>
+                    </v-btn>
                   </v-list-item>
                 </v-list-item-group>
               </v-list>
@@ -49,33 +62,42 @@
           />
         </div>
         <div class="pt-12 d-flex flex-column">
-          <v-btn
-            dark
-            width="210"
-            height="55"
-            class="mb-5 text-h5 d-flex justify-space-between"
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/tarcisio-almeida-0a5577207/"
           >
-            <span>LINKEDIN</span>
-            <v-icon>mdi-linkedin</v-icon>
-          </v-btn>
-          <v-btn
-            dark
-            width="210"
-            height="55"
-            class="mb-5 text-h5 d-flex justify-space-between"
-          >
-            <span>GITHUB</span>
-            <v-icon>mdi-github</v-icon>
-          </v-btn>
-          <v-btn
-            dark
-            width="210"
-            height="55"
-            class="mb-5 text-h5 d-flex justify-space-between"
-          >
-            <span>CONTATO</span>
-            <v-icon>mdi-account-box</v-icon>
-          </v-btn>
+            <v-btn
+              dark
+              width="210"
+              height="55"
+              class="mb-5 text-h5 d-flex justify-space-between"
+            >
+              <span>LINKEDIN</span>
+              <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+          </a>
+          <a target="_blank" href="https://github.com/TLucas97">
+            <v-btn
+              dark
+              width="210"
+              height="55"
+              class="mb-5 text-h5 d-flex justify-space-between"
+            >
+              <span>GITHUB</span>
+              <v-icon>mdi-github</v-icon>
+            </v-btn>
+          </a>
+          <a href="#">
+            <v-btn
+              dark
+              width="210"
+              height="55"
+              class="mb-5 text-h5 d-flex justify-space-between"
+            >
+              <span>CONTATO</span>
+              <v-icon>mdi-account-box</v-icon>
+            </v-btn>
+          </a>
           <v-btn
             dark
             width="210"
@@ -337,7 +359,7 @@ export default {
         id: 1,
         name: 'EN-US',
         pic: 'https://cdn-icons-png.flaticon.com/512/206/206626.png',
-      }
+      },
     ],
     dialog: false,
     modals: {
