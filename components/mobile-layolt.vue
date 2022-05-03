@@ -9,41 +9,29 @@
         >
           <div class="d-flex align-center">
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-            <h5 class="code-pro">TARCISIO ALMEIDA</h5>
+            <h5 class="code-pro" @click="translate('subText1')">{{ translate("mainName") }}</h5>
           </div>
           <div class="d-flex align-center">
             <!-- COUNTRY SELECTION -->
             <v-menu offset-y close-on-click>
               <template #activator="{ on }">
                 <v-btn class="black--text" elevation="0" text v-on="on">
-                  <span class="pr-2">PT-BR</span>
-                  <img
-                    src="https://cdn-icons.flaticon.com/png/512/4087/premium/4087479.png?token=exp=1651538089~hmac=04ae174cdf399778957c05135bc5b44c"
-                    alt=""
-                    width="20"
-                  />
+                  <span class="pr-2">{{ translate("currentName") }}</span>
+                  <img :src="translate('currentFlag')" alt="" width="20" />
                   <v-icon right> mdi-chevron-down </v-icon>
                 </v-btn>
               </template>
 
               <v-list>
-                <v-list-item-group v-model="countriesLang.id">
-                  <v-list-item
-                    v-for="(titles, idx) in countriesLang"
-                    :key="idx"
-                    value="titles"
-                  >
-                    <v-btn
-                      text
-                      class="black--text d-flex justify-space-between align-center"
-                    >
-                      <span class="pr-2 black--text font-weight-bold">{{
-                        titles.name
-                      }}</span>
-                      <div>
-                        <img :src="titles.pic" width="20" />
-                      </div>
-                    </v-btn>
+                <v-list-item-group>
+                  <v-list-item>
+                    <small
+                      style="width: 100%"
+                      class="font-weight-bold d-flex align-center justify-space-around"
+                      @click="changeLang"
+                      >{{ translate("langChange") }}
+                      <img :src="translate('otherFlag')" width="20" />
+                    </small>
                   </v-list-item>
                 </v-list-item-group>
               </v-list>
@@ -95,7 +83,7 @@
               height="55"
               class="mb-5 text-h5 d-flex justify-space-between"
             >
-              <span>CONTATO</span>
+              <span>{{ translate("socialsContact") }}</span>
               <v-icon>mdi-account-box</v-icon>
             </v-btn>
           </a>
@@ -105,54 +93,34 @@
             height="55"
             class="mb-5 text-h5 d-flex justify-space-between"
           >
-            <span>CURRÍCULO</span>
+            <span>{{ translate("socialsCV") }}</span>
             <v-icon>mdi-file-account</v-icon>
           </v-btn>
         </div>
       </div>
       <div class="pt-16 profile-content">
         <div>
-          <h1 id="about-me" class="code-pro">Sobre mim</h1>
+          <h1 id="about-me" class="code-pro">{{ translate("aboutTitle") }}</h1>
           <hr class="line" />
           <div class="pt-5">
             <p class="code-pro text-justify">
-              <strong>• O início</strong> <br />
-              <span
-                >- Em 2021 dei início a minha jornada para a carreira na área de
-                desenvolvimento, desde então tenho trabalhado na criação de
-                aplicações para fins de estudo e no início de 2022 tive a
-                oportunidade de trabalhar em projetos reais. Isso me
-                possibilitou alavancar meus estudos e me motivar a cada vez mais
-                buscar conhecimento e explorar as possibilidades que cada
-                tecnologia me permitia obter.</span
-              >
+              <strong>{{ translate("subTitle1") }}</strong> <br />
+              <span>{{ translate("subText1") }}</span>
             </p>
             <p class="code-pro text-justify">
-              <strong>• Meu objetivo</strong><br />
-              <span
-                >- Como desenvolvedor, fui capaz de perceber a satisfação de
-                causar impacto na resolução de problemas, atuar nesse tipo de
-                ambiente nos permite entender a importância de alcançar
-                objetivos e reconhecer os mesmos com clareza. Foi através dessa
-                percepção que decidi tornar como objetivo de vida resolver
-                problemas de forma cada vez mais eficiente.</span
-              >
+              <strong>{{ translate("subTitle2") }}</strong
+              ><br />
+              <span>{{ translate("subText2") }}</span>
             </p>
             <p class="code-pro text-justify">
-              <strong>• Experiência profissional</strong> <br />
-              <span
-                >- Atualmente trabalho como Desenvolvedor Front-end na
-                <a target="_blank" href="https://www.suthub.com/"
-                  ><span class="suthub-text">SUTHUB</span></a
-                >, atuando na criação de aplicações web e fornecendo suporte em
-                projetos contínuos.</span
-              >
+              <strong>{{ translate("subTitle3") }}</strong> <br />
+              <span>{{ translate("subText3") }}</span>
             </p>
           </div>
         </div>
         <div id="techs"></div>
         <div class="pt-10 d-sm-none">
-          <h1 class="code-pro">Tecnologias</h1>
+          <h1 class="code-pro">{{ translate("techTitle") }}</h1>
           <hr class="line" />
           <div class="pt-7">
             <v-row>
@@ -214,7 +182,7 @@
         </div>
         <tech-icons class="forced-none" />
         <div class="pt-10">
-          <h1 class="code-pro">Outros</h1>
+          <h1 class="code-pro">{{ translate("othersTitle") }}</h1>
           <hr class="line" />
           <div class="pt-7">
             <v-row>
@@ -227,7 +195,7 @@
           </div>
         </div>
         <div class="pt-10">
-          <h1 id="projects" class="code-pro">Projetos</h1>
+          <h1 id="projects" class="code-pro">{{ translate("projectsTitle") }}</h1>
           <hr class="line" />
           <v-card elevation="24" max-width="444" class="mx-auto mt-7">
             <v-system-bar lights-out></v-system-bar>
@@ -253,9 +221,7 @@
                         >mdi-lightbulb-on</v-icon
                       >
                       <br />
-                      <small class="white--text"
-                        >Clique para mais detalhes</small
-                      >
+                      <small class="white--text">{{ translate("moreDetails") }}</small>
                     </div>
                   </v-row>
                 </v-sheet>
@@ -269,7 +235,7 @@
                 <v-list-item-content>
                   <v-list-item-title>Tarcísio Almeida</v-list-item-title>
                   <v-list-item-title class="font-weight-bold"
-                    >• Projetos</v-list-item-title
+                    >• {{ translate("projectslilTitle") }}</v-list-item-title
                   >
                 </v-list-item-content>
               </v-list-item>
@@ -299,7 +265,7 @@
                 <v-list-item-icon>
                   <v-icon>mdi-account-alert</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>Sobre mim</v-list-item-title>
+                <v-list-item-title>{{ translate("headerAbout") }}</v-list-item-title>
               </v-list-item>
             </a>
             <a href="#techs">
@@ -307,7 +273,7 @@
                 <v-list-item-icon>
                   <v-icon>mdi-language-javascript</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>Tecnologias</v-list-item-title>
+                <v-list-item-title>{{ translate("headerTech") }}</v-list-item-title>
               </v-list-item>
             </a>
             <a href="#projects">
@@ -315,7 +281,7 @@
                 <v-list-item-icon>
                   <v-icon>mdi-lightbulb-on</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>Projetos</v-list-item-title>
+                <v-list-item-title>{{ translate("headerProjects") }}</v-list-item-title>
               </v-list-item>
             </a>
           </v-list-item-group>
@@ -354,9 +320,14 @@
 </template>
 
 <script>
+import en from '../mixins/en.js'
+import ptbr from '../mixins/pt-br.js'
+
 export default {
+  mixins: [en, ptbr],
   data: () => ({
     currentIndex: 0,
+    lang: 'en',
     countriesLang: [
       {
         id: 1,
@@ -422,6 +393,16 @@ export default {
         this.modals.modal_5 = true
       }
     },
+    translate(prop) {
+      return this[this.lang][prop];
+    },
+    changeLang(){
+      if (this.lang === 'en'){
+        this.lang = 'ptbr'
+      } else if (this.lang === 'ptbr'){
+        this.lang = 'en'
+      }
+    }
   },
 }
 </script>
@@ -458,28 +439,28 @@ export default {
 }
 
 /* RESPONSIVENESS */
-@media (max-width: 800px){
-  .alternative{
+@media (max-width: 800px) {
+  .alternative {
     display: none !important;
   }
 
-  .socials{
+  .socials {
     display: block !important;
   }
 }
 
-@media (min-width: 800px){
-  .socials{
+@media (min-width: 800px) {
+  .socials {
     display: none !important;
   }
 
-  .alternative{
+  .alternative {
     display: block !important;
   }
 }
 
-@media (max-width: 600px){
-  .forced-none{
+@media (max-width: 600px) {
+  .forced-none {
     display: none !important;
   }
 }
