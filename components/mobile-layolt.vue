@@ -462,11 +462,19 @@ export default {
   .alternative{
     display: none !important;
   }
+
+  .socials{
+    display: block !important;
+  }
 }
 
 @media (min-width: 800px){
   .socials{
     display: none !important;
+  }
+
+  .alternative{
+    display: block !important;
   }
 }
 </style>
