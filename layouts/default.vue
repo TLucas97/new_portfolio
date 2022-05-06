@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <mobile-layolt class="d-md-none" />
+    <desktop-layolt class="d-sm-none d-md-block" />
     <Nuxt />
-    <mobile-footer />
   </v-app>
 </template>
 

@@ -9,6 +9,15 @@ export default {
         projectsTitle: 'Projetos',
         projectslilTitle: 'Projetos',
 
+        cardNameLabel: 'Name:',
+        cardAgeLabel: 'Idade:',
+        cardProfessionLabel: 'Profissão:',
+        cardNacionalityLabel: 'Nacionalidade:',
+
+        cardAge: '25 anos',
+        cardProfession: 'Desenvolvedor Front-end',
+        cardNacionality: 'Brasileiro',
+
         headerAbout: 'Sobre mim',
         headerTech: 'Tecnologias',
         headerProjects: 'Projetos',
