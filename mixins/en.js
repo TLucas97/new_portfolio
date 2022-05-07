@@ -22,6 +22,24 @@ export default {
         headerTech: 'Technologies',
         headerProjects: 'Projects',
 
+        urnName: 'Brazilian Voting Device',
+
+        descriptionLabel: 'Description',
+        techLabel: 'Technologies',
+        useLabel: 'Use',
+        repoLabel: 'Repository',
+
+        show: 'Show project',
+
+        descriptionTracker: 'A web application that provides that from a Covid-19 API.',
+        descriptionPotter: 'A web application that provides data from Harry Potter movies and Books.',
+        descriptionUrn: 'A web application that works the same way as the device used for votes on Brazilian elections',
+        descriptionBrawl: 'A web application that provides that from a mobile game called Brawl Stars.',
+        descriptionWeather: 'A web applicaion that tells you the weather of the location you search for.',
+
+        useMsg: 'Click here to use the project (Available only on desktop)',
+        repoMsg: 'Click here to acess the repository',
+
         socialsCV: 'Resume',
         socialsContact: 'Contact',
 

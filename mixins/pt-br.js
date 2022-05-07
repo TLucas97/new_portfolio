@@ -22,6 +22,31 @@ export default {
         headerTech: 'Tecnologias',
         headerProjects: 'Projetos',
 
+        urnName: 'Urna eletrônica',
+
+        descriptionLabel: 'Descrição',
+        techLabel: 'Tecnologias',
+        useLabel: 'Uso',
+        repoLabel: 'Repositório',
+
+        show: 'Mostrar projeto',
+
+        descriptionTracker: `- Aplicativo web que carrega dados de uma api que
+        fornece informações em tempo real sobre casos de
+        COVID-19.`,
+        descriptionPotter: `- Aplicativo web que fornece dados de personagens,
+        magias, livros, filmes da saga Harry Potter dos filmes e
+        livros.`,
+        descriptionUrn: `- Aplicativo web que simula as funcionalidades da urna
+        eletrônica que é utilizada nas eleições brasileiras.`,
+        descriptionBrawl: ` - Aplicativo web que fornece dados de personagem, mapas
+        e gamemodes do jogo BrawlStars.`,
+        descriptionWeather: `- Aplicativo web que fornece dados de clima baseado na
+        sua pesquisa`,
+
+        useMsg: 'Clique aqui para usar (Disponível apenas para desktop)',
+        repoMsg: 'Clique aqui para acessar',
+
         socialsCV: 'Currículo',
         socialsContact: 'Contato',
 

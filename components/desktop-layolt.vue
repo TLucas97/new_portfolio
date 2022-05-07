@@ -4,8 +4,8 @@
       <v-menu offset-y close-on-click top>
         <template #activator="{ on }">
           <v-btn elevation="0" text v-on="on">
-            <span class="pr-2" :class="dark_mode">{{ en.currentName }}</span>
-            <img :src="en.currentFlag" alt="" width="20" />
+            <span class="pr-2" :class="dark_mode">{{ translate('currentName') }}</span>
+            <img :src="translate('currentFlag')" alt="" width="20" />
             <v-icon :class="dark_mode" right> mdi-chevron-up </v-icon>
           </v-btn>
         </template>
@@ -16,8 +16,8 @@
               style="width: 100%"
               class="font-weight-bold d-flex align-center justify-space-around"
               @click="changeLang"
-              >{{ en.langChange }}
-              <img :src="en.otherFlag" width="20" />
+              >{{ translate('langChange') }}
+              <img :src="translate('otherFlag')" width="20" />
             </small>
           </v-list-item-group>
         </v-list>
@@ -46,7 +46,7 @@
             class="hover-underline-animation font-weight-bold"
             text
             elevation="0"
-            >{{ en.techTitle }}</v-btn
+            >{{ translate('techTitle') }}</v-btn
           >
         </a>
         <a href="#desktop_projects">
@@ -55,7 +55,7 @@
             class="hover-underline-animation font-weight-bold"
             text
             elevation="0"
-            >{{ en.projectsTitle }}</v-btn
+            >{{ translate('projectsTitle') }}</v-btn
           >
         </a>
       </div>
@@ -63,8 +63,8 @@
         <v-btn
           :class="dark_mode"
           class="dark-mode-hover"
-          @click="darkMode"
           text
+          @click="darkMode"
         >
           <small>Dark mode</small>
           <v-icon :class="dark_mode" color="yellow" class="pb-2 pl-2"
@@ -83,28 +83,28 @@
               style="width: 90%; border-radius: 15px"
             />
             <p class="mt-5">
-              <strong>{{ en.cardNameLabel }}</strong> Tarcísio Almeida
+              <strong>{{ translate('cardNameLabel') }}</strong> Tarcísio Almeida
             </p>
             <p>
-              <strong>{{ en.cardAgeLabel }}</strong> {{ en.cardAge }}
+              <strong>{{ translate('cardAgeLabel') }}</strong> {{ translate('cardAge') }}
             </p>
             <p>
-              <strong>{{ en.cardProfessionLabel }}</strong>
-              {{ en.cardProfession }}
+              <strong>{{ translate('cardProfessionLabel') }}</strong>
+              {{ translate('cardProfession') }}
             </p>
             <p>
-              <strong>{{ en.cardNacionalityLabel }}</strong>
-              {{ en.cardNacionality }}
+              <strong>{{ translate('cardNacionalityLabel') }}</strong>
+              {{ translate('cardNacionality') }}
             </p>
           </v-col>
           <v-col>
-            <h2>{{ en.aboutTitle }}</h2>
-            <h3 class="mt-5">{{ en.subTitle1 }}</h3>
-            <p style="font-size: 1rem">{{ en.subText1 }}</p>
-            <h3 class="mt-5">{{ en.subTitle2 }}</h3>
-            <p style="font-size: 1rem">{{ en.subText2 }}</p>
-            <h3 class="mt-5">{{ en.subTitle3 }}</h3>
-            <p style="font-size: 1rem">{{ en.subText3 }}</p>
+            <h2>{{ translate('aboutTitle') }}</h2>
+            <h3 class="mt-5">{{ translate('subTitle1') }}</h3>
+            <p style="font-size: 1rem">{{ translate('subText1') }}</p>
+            <h3 class="mt-5">{{ translate('subTitle2') }}</h3>
+            <p style="font-size: 1rem">{{ translate('subText2') }}</p>
+            <h3 class="mt-5">{{ translate('subTitle3') }}</h3>
+            <p style="font-size: 1rem">{{ translate('subText3') }}</p>
           </v-col>
         </v-row>
       </div>
@@ -149,27 +149,29 @@
               height="55"
               class="mb-5 text-h5 d-flex justify-space-between"
             >
-              <span>{{ en.socialsContact }}</span>
-              <v-icon>mdi-account-box</v-icon>
+              <span>{{ translate('socialsCV') }}</span>
+              <v-icon>mdi-file-account</v-icon>
             </v-btn>
           </a>
         </div>
         <div>
-          <v-btn
+          <a target="_blank" href="mailto:tarcisio.almeida197@gmail.com">
+            <v-btn
             color="#E1E1E1"
             width="210"
             height="55"
             class="mb-5 text-h5 d-flex justify-space-between"
           >
-            <span>{{ en.socialsCV }}</span>
-            <v-icon>mdi-file-account</v-icon>
+            <span>{{ translate('socialsContact') }}</span>
+            <v-icon>mdi-account-box</v-icon>
           </v-btn>
+          </a>
         </div>
       </div>
 
       <span id="desktop_tech"></span>
       <div class="pt-16 mt-5">
-        <h1 class="text-center">{{ en.techTitle }}</h1>
+        <h1 class="text-center">{{ translate('techTitle') }}</h1>
         <hr class="line" style="margin: 0 auto" />
         <div class="pt-9" style="max-width: 80%; margin: 0 auto">
           <v-row>
@@ -211,7 +213,7 @@
           <span id="desktop_projects"></span>
           <div class="pt-16">
             <div>
-              <h1 class="text-center">{{ en.projectsTitle }}</h1>
+              <h1 class="text-center">{{ translate('projectsTitle') }}</h1>
               <hr class="line" style="margin: 0 auto" />
               <v-row class="pt-10">
                 <v-col v-if="project_1" class="smooth-white-box mr-5">
@@ -225,14 +227,12 @@
                       />
                     </div>
                     <div>
-                      <h2 class="code-pro">Descrição</h2>
+                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <p class="code-pro">
-                        - Aplicativo web que carrega dados de uma api que
-                        fornece informações em tempo real sobre casos de
-                        COVID-19.
+                        {{ translate('descriptionTracker') }}
                       </p>
-                      <h2 class="code-pro mt-7">Tecnologias</h2>
+                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <v-icon x-large color="yellow"
                         >mdi-language-javascript</v-icon
@@ -240,23 +240,23 @@
                       <v-icon x-large color="red">mdi-language-html5</v-icon>
                       <v-icon x-large color="blue">mdi-language-css3</v-icon>
 
-                      <h2 class="code-pro mt-7">Uso</h2>
+                      <h2 class="code-pro mt-7">{{ translate('useLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://sleepy-leavitt-24ad59.netlify.app/"
                         class="font-weight-bold"
                       >
-                        Clique aqui para testar (Disponível apenas para desktop)
+                        {{ translate('useMsg') }}
                       </a>
-                      <h2 class="code-pro mt-7">Repositório</h2>
+                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://github.com/TLucas97/covid-tracker"
                         class="font-weight-bold"
                       >
-                        Clique aqui para acessar
+                        {{ translate('repoMsg') }}
                       </a>
                     </div>
                   </div>
@@ -272,7 +272,7 @@
                             >Covid Tracker</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -286,7 +286,7 @@
                             >Harry Potter Wiki</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -297,10 +297,10 @@
                             color="primary"
                             @click="changeProj3"
                             v-on="on"
-                            >Urna eletrônica</v-btn
+                            >{{ translate('urnName') }}</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -314,7 +314,7 @@
                             >BrawlStars Data</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -328,7 +328,7 @@
                             >Weather app</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                   </v-row>
@@ -344,14 +344,12 @@
                       />
                     </div>
                     <div>
-                      <h2 class="code-pro">Descrição</h2>
+                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <p class="code-pro">
-                        - Aplicativo web que fornece dados de personagens,
-                        magias, livros, filmes da saga Harry Potter dos filmes e
-                        livros.
+                        {{ translate('descriptionPotter') }}
                       </p>
-                      <h2 class="code-pro mt-7">Tecnologias</h2>
+                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <v-icon x-large color="yellow"
                         >mdi-language-javascript</v-icon
@@ -361,24 +359,24 @@
                       <v-icon x-large color="green">mdi-vuejs</v-icon>
                       <v-icon x-large color="blue">mdi-vuetify</v-icon>
 
-                      <h2 class="code-pro mt-7">Uso</h2>
+                      <h2 class="code-pro mt-7">{{ translate('useLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://potter-wiki.netlify.app/"
                         class="font-weight-bold"
                       >
-                        Clique aqui para testar (Disponível apenas para desktop)
+                        {{ translate('useMsg') }}
                       </a>
 
-                      <h2 class="code-pro mt-7">Repositório</h2>
+                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://github.com/TLucas97/hp-data-project"
                         class="font-weight-bold"
                       >
-                        Clique aqui para acessar
+                        {{ translate('repoMsg') }}
                       </a>
                     </div>
                   </div>
@@ -394,7 +392,7 @@
                             >Covid Tracker</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -408,7 +406,7 @@
                             >Harry Potter Wiki</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -419,10 +417,10 @@
                             color="primary"
                             @click="changeProj3"
                             v-on="on"
-                            >Urna eletrônica</v-btn
+                            >{{ translate('urnName') }}</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -436,7 +434,7 @@
                             >BrawlStars Data</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -450,7 +448,7 @@
                             >Weather app</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                   </v-row>
@@ -459,7 +457,7 @@
               <v-row class="pt-10">
                 <v-col v-if="project_3" class="smooth-white-box mr-5">
                   <div class="modal-content pt-4 pb-4">
-                    <h1 class="text-center code-pro">Urna eletrônica</h1>
+                    <h1 class="text-center code-pro">{{ translate('urnName') }}</h1>
                     <hr class="modal-line" />
                     <div>
                       <img
@@ -468,13 +466,12 @@
                       />
                     </div>
                     <div>
-                      <h2 class="code-pro">Descrição</h2>
+                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <p class="code-pro">
-                        - Aplicativo web que simula as funcionalidades da urna
-                        eletrônica que é utilizada nas eleições brasileiras.
+                        {{ translate('descriptionUrn') }}
                       </p>
-                      <h2 class="code-pro mt-7">Tecnologias</h2>
+                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <v-icon x-large color="yellow"
                         >mdi-language-javascript</v-icon
@@ -482,14 +479,14 @@
                       <v-icon x-large color="red">mdi-language-html5</v-icon>
                       <v-icon x-large color="blue">mdi-language-css3</v-icon>
 
-                      <h2 class="code-pro mt-7">Repositório</h2>
+                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://github.com/TLucas97/Urna-Customizada"
                         class="font-weight-bold"
                       >
-                        Clique aqui para acessar
+                        {{ translate('repoMsg') }}
                       </a>
                     </div>
                   </div>
@@ -505,7 +502,7 @@
                             >Covid Tracker</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -519,7 +516,7 @@
                             >Harry Potter Wiki</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -530,10 +527,10 @@
                             color="primary"
                             @click="changeProj3"
                             v-on="on"
-                            >Urna eletrônica</v-btn
+                            >{{ translate('urnName') }}</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -547,7 +544,7 @@
                             >BrawlStars Data</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -561,14 +558,14 @@
                             >Weather app</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                   </v-row>
                 </v-col>
                 <v-col v-if="project_4" class="smooth-white-box">
                   <div class="modal-content pt-4 pb-4">
-                    <h1 class="text-center code-pro">Brawstars Data</h1>
+                    <h1 class="text-center code-pro">BrawlStars Data</h1>
                     <hr class="modal-line" />
                     <div>
                       <img
@@ -577,13 +574,12 @@
                       />
                     </div>
                     <div>
-                      <h2 class="code-pro">Descrição</h2>
+                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <p class="code-pro">
-                        - Aplicativo web que fornece dados de personagem, mapas
-                        e gamemodes do jogo BrawlStars.
+                        {{ translate('descriptionBrawl') }}
                       </p>
-                      <h2 class="code-pro mt-7">Tecnologias</h2>
+                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <v-icon x-large color="yellow"
                         >mdi-language-javascript</v-icon
@@ -592,24 +588,24 @@
                       <v-icon x-large color="blue">mdi-language-css3</v-icon>
                       <v-icon x-large color="green">mdi-vuejs</v-icon>
 
-                      <h2 class="code-pro mt-7">Uso</h2>
+                      <h2 class="code-pro mt-7">{{ translate('useLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://brawlegends-data.netlify.app/"
                         class="font-weight-bold"
                       >
-                        Clique aqui para testar (Disponível apenas para desktop)
+                        {{ translate('useMsg') }}
                       </a>
 
-                      <h2 class="code-pro mt-7">Repositório</h2>
+                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://github.com/TLucas97/brawstars-data-project/"
                         class="font-weight-bold"
                       >
-                        Clique aqui para acessar
+                        {{ translate('repoMsg') }}
                       </a>
                     </div>
                   </div>
@@ -625,7 +621,7 @@
                             >Covid Tracker</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -639,7 +635,7 @@
                             >Harry Potter Wiki</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -650,10 +646,10 @@
                             color="primary"
                             @click="changeProj3"
                             v-on="on"
-                            >Urna eletrônica</v-btn
+                            >{{ translate('urnName') }}</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -667,7 +663,7 @@
                             >BrawlStars Data</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -681,7 +677,7 @@
                             >Weather app</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                   </v-row>
@@ -700,13 +696,12 @@
                       />
                     </div>
                     <div>
-                      <h2 class="code-pro">Descrição</h2>
+                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <p class="code-pro">
-                        - Aplicativo web que fornece dados de clima baseado na
-                        sua pesquisa
+                        {{ translate('descriptionWeather') }}
                       </p>
-                      <h2 class="code-pro mt-7">Tecnologias</h2>
+                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <v-icon x-large color="yellow"
                         >mdi-language-javascript</v-icon
@@ -715,14 +710,14 @@
                       <v-icon x-large color="blue">mdi-language-css3</v-icon>
                       <v-icon x-large color="green">mdi-vuejs</v-icon>
 
-                      <h2 class="code-pro mt-7">Repositório</h2>
+                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
                       <hr class="mb-2 mt-2" />
                       <a
                         target="_blank"
                         href="https://github.com/TLucas97/clima-weather-app"
                         class="font-weight-bold"
                       >
-                        Clique aqui para acessar
+                        {{ translate('repoMsg') }}
                       </a>
                     </div>
                   </div>
@@ -738,7 +733,7 @@
                             >Covid Tracker</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -752,7 +747,7 @@
                             >Harry Potter Wiki</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -763,10 +758,10 @@
                             color="primary"
                             @click="changeProj3"
                             v-on="on"
-                            >Urna eletrônica</v-btn
+                            >{{ translate('urnName') }}</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -780,7 +775,7 @@
                             >BrawlStars Data</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col class="d-flex justify-center align-center">
@@ -794,7 +789,7 @@
                             >Weather app</v-btn
                           >
                         </template>
-                        <span>Mostrar projeto</span>
+                        <span>{{ translate('show') }}</span>
                       </v-tooltip>
                     </v-col>
                   </v-row>
@@ -872,6 +867,16 @@ export default {
       ) {
         this.dark_mode = ''
         this.lightbulb = 'lightbulb-on'
+      }
+    },
+    translate(prop) {
+      return this[this.lang][prop]
+    },
+    changeLang() {
+      if (this.lang === 'en') {
+        this.lang = 'ptbr'
+      } else if (this.lang === 'ptbr') {
+        this.lang = 'en'
       }
     },
   },
@@ -1061,4 +1066,6 @@ span {
   background: #212121 !important;
   color: white !important;
 }
+
+/* Animations */
 </style>
