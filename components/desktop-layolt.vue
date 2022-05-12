@@ -4,7 +4,9 @@
       <v-menu offset-y close-on-click top>
         <template #activator="{ on }">
           <v-btn elevation="0" text v-on="on">
-            <span class="pr-2" :class="dark_mode">{{ translate('currentName') }}</span>
+            <span class="pr-2" :class="dark_mode">{{
+              translate('currentName')
+            }}</span>
             <img :src="translate('currentFlag')" alt="" width="20" />
             <v-icon :class="dark_mode" right> mdi-chevron-up </v-icon>
           </v-btn>
@@ -86,7 +88,8 @@
               <strong>{{ translate('cardNameLabel') }}</strong> Tarcísio Almeida
             </p>
             <p>
-              <strong>{{ translate('cardAgeLabel') }}</strong> {{ translate('cardAge') }}
+              <strong>{{ translate('cardAgeLabel') }}</strong>
+              {{ translate('cardAge') }}
             </p>
             <p>
               <strong>{{ translate('cardProfessionLabel') }}</strong>
@@ -157,14 +160,14 @@
         <div>
           <a target="_blank" href="mailto:tarcisio.almeida197@gmail.com">
             <v-btn
-            color="#E1E1E1"
-            width="210"
-            height="55"
-            class="mb-5 text-h5 d-flex justify-space-between"
-          >
-            <span>{{ translate('socialsContact') }}</span>
-            <v-icon>mdi-account-box</v-icon>
-          </v-btn>
+              color="#E1E1E1"
+              width="210"
+              height="55"
+              class="mb-5 text-h5 d-flex justify-space-between"
+            >
+              <span>{{ translate('socialsContact') }}</span>
+              <v-icon>mdi-account-box</v-icon>
+            </v-btn>
           </a>
         </div>
       </div>
@@ -219,46 +222,64 @@
                 <v-col v-if="project_1" class="smooth-white-box mr-5">
                   <div class="modal-content pt-4 pb-4">
                     <h1 class="text-center code-pro">Covid Tracker</h1>
-                    <hr class="modal-line" />
-                    <div>
-                      <img
-                        src="~/static/img/covid-tracker.png"
-                        class="mobile-project-img mt-4 mb-4"
-                      />
-                    </div>
-                    <div>
-                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <p class="code-pro">
-                        {{ translate('descriptionTracker') }}
-                      </p>
-                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <v-icon x-large color="yellow"
-                        >mdi-language-javascript</v-icon
-                      >
-                      <v-icon x-large color="red">mdi-language-html5</v-icon>
-                      <v-icon x-large color="blue">mdi-language-css3</v-icon>
+                    <hr class="modal-line mb-6" />
+                    <v-row>
+                      <v-col>
+                        <div>
+                          <img
+                            src="~/static/img/covid-tracker.png"
+                            class="mobile-project-img mt-4 mb-4"
+                          />
+                        </div>
+                      </v-col>
+                      <v-col>
+                        <div>
+                          <h2 class="code-pro">
+                            {{ translate('descriptionLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <p class="code-pro">
+                            {{ translate('descriptionTracker') }}
+                          </p>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('techLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <v-icon x-large color="yellow"
+                            >mdi-language-javascript</v-icon
+                          >
+                          <v-icon x-large color="red"
+                            >mdi-language-html5</v-icon
+                          >
+                          <v-icon x-large color="blue"
+                            >mdi-language-css3</v-icon
+                          >
 
-                      <h2 class="code-pro mt-7">{{ translate('useLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://sleepy-leavitt-24ad59.netlify.app/"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('useMsg') }}
-                      </a>
-                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://github.com/TLucas97/covid-tracker"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('repoMsg') }}
-                      </a>
-                    </div>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('useLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://sleepy-leavitt-24ad59.netlify.app/"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('useMsg') }}
+                          </a>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('repoLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://github.com/TLucas97/covid-tracker"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('repoMsg') }}
+                          </a>
+                        </div>
+                      </v-col>
+                    </v-row>
                   </div>
                   <v-row class="pt-7">
                     <v-col class="d-flex justify-center align-center">
@@ -336,49 +357,67 @@
                 <v-col v-if="project_2" class="smooth-white-box">
                   <div class="modal-content pt-4 pb-4">
                     <h1 class="text-center code-pro">Harry Potter Wiki</h1>
-                    <hr class="modal-line" />
-                    <div>
-                      <img
-                        src="~/static/img/potter-wiki.png"
-                        class="mobile-project-img mt-4 mb-4"
-                      />
-                    </div>
-                    <div>
-                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <p class="code-pro">
-                        {{ translate('descriptionPotter') }}
-                      </p>
-                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <v-icon x-large color="yellow"
-                        >mdi-language-javascript</v-icon
-                      >
-                      <v-icon x-large color="red">mdi-language-html5</v-icon>
-                      <v-icon x-large color="blue">mdi-language-css3</v-icon>
-                      <v-icon x-large color="green">mdi-vuejs</v-icon>
-                      <v-icon x-large color="blue">mdi-vuetify</v-icon>
+                    <hr class="modal-line mb-6" />
+                    <v-row>
+                      <v-col>
+                        <div>
+                          <img
+                            src="~/static/img/potter-wiki.png"
+                            class="mobile-project-img mt-4 mb-4"
+                          />
+                        </div>
+                      </v-col>
+                      <v-col>
+                        <div>
+                          <h2 class="code-pro">
+                            {{ translate('descriptionLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <p class="code-pro">
+                            {{ translate('descriptionPotter') }}
+                          </p>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('techLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <v-icon x-large color="yellow"
+                            >mdi-language-javascript</v-icon
+                          >
+                          <v-icon x-large color="red"
+                            >mdi-language-html5</v-icon
+                          >
+                          <v-icon x-large color="blue"
+                            >mdi-language-css3</v-icon
+                          >
+                          <v-icon x-large color="green">mdi-vuejs</v-icon>
+                          <v-icon x-large color="blue">mdi-vuetify</v-icon>
 
-                      <h2 class="code-pro mt-7">{{ translate('useLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://potter-wiki.netlify.app/"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('useMsg') }}
-                      </a>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('useLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://potter-wiki.netlify.app/"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('useMsg') }}
+                          </a>
 
-                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://github.com/TLucas97/hp-data-project"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('repoMsg') }}
-                      </a>
-                    </div>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('repoLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://github.com/TLucas97/hp-data-project"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('repoMsg') }}
+                          </a>
+                        </div>
+                      </v-col>
+                    </v-row>
                   </div>
                   <v-row class="pt-7">
                     <v-col class="d-flex justify-center align-center">
@@ -457,38 +496,56 @@
               <v-row class="pt-10">
                 <v-col v-if="project_3" class="smooth-white-box mr-5">
                   <div class="modal-content pt-4 pb-4">
-                    <h1 class="text-center code-pro">{{ translate('urnName') }}</h1>
-                    <hr class="modal-line" />
-                    <div>
-                      <img
-                        src="~/static/img/urna.png"
-                        class="mobile-project-img mt-4 mb-4"
-                      />
-                    </div>
-                    <div>
-                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <p class="code-pro">
-                        {{ translate('descriptionUrn') }}
-                      </p>
-                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <v-icon x-large color="yellow"
-                        >mdi-language-javascript</v-icon
-                      >
-                      <v-icon x-large color="red">mdi-language-html5</v-icon>
-                      <v-icon x-large color="blue">mdi-language-css3</v-icon>
+                    <h1 class="text-center code-pro">
+                      {{ translate('urnName') }}
+                    </h1>
+                    <hr class="modal-line mb-6" />
+                    <v-row>
+                      <v-col>
+                        <div>
+                          <img
+                            src="~/static/img/urna.png"
+                            class="mobile-project-img mt-4 mb-4"
+                          />
+                        </div>
+                      </v-col>
+                      <v-col>
+                        <div>
+                          <h2 class="code-pro">
+                            {{ translate('descriptionLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <p class="code-pro">
+                            {{ translate('descriptionUrn') }}
+                          </p>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('techLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <v-icon x-large color="yellow"
+                            >mdi-language-javascript</v-icon
+                          >
+                          <v-icon x-large color="red"
+                            >mdi-language-html5</v-icon
+                          >
+                          <v-icon x-large color="blue"
+                            >mdi-language-css3</v-icon
+                          >
 
-                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://github.com/TLucas97/Urna-Customizada"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('repoMsg') }}
-                      </a>
-                    </div>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('repoLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://github.com/TLucas97/Urna-Customizada"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('repoMsg') }}
+                          </a>
+                        </div>
+                      </v-col>
+                    </v-row>
                   </div>
                   <v-row class="pt-7">
                     <v-col class="d-flex justify-center align-center">
@@ -566,48 +623,66 @@
                 <v-col v-if="project_4" class="smooth-white-box">
                   <div class="modal-content pt-4 pb-4">
                     <h1 class="text-center code-pro">BrawlStars Data</h1>
-                    <hr class="modal-line" />
-                    <div>
-                      <img
-                        src="~/static/img/braw.png"
-                        class="mobile-project-img mt-4 mb-4"
-                      />
-                    </div>
-                    <div>
-                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <p class="code-pro">
-                        {{ translate('descriptionBrawl') }}
-                      </p>
-                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <v-icon x-large color="yellow"
-                        >mdi-language-javascript</v-icon
-                      >
-                      <v-icon x-large color="red">mdi-language-html5</v-icon>
-                      <v-icon x-large color="blue">mdi-language-css3</v-icon>
-                      <v-icon x-large color="green">mdi-vuejs</v-icon>
+                    <hr class="modal-line mb-6" />
+                    <v-row>
+                      <v-col>
+                        <div>
+                          <img
+                            src="~/static/img/braw.png"
+                            class="mobile-project-img mt-4 mb-4"
+                          />
+                        </div>
+                      </v-col>
+                      <v-col>
+                        <div>
+                          <h2 class="code-pro">
+                            {{ translate('descriptionLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <p class="code-pro">
+                            {{ translate('descriptionBrawl') }}
+                          </p>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('techLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <v-icon x-large color="yellow"
+                            >mdi-language-javascript</v-icon
+                          >
+                          <v-icon x-large color="red"
+                            >mdi-language-html5</v-icon
+                          >
+                          <v-icon x-large color="blue"
+                            >mdi-language-css3</v-icon
+                          >
+                          <v-icon x-large color="green">mdi-vuejs</v-icon>
 
-                      <h2 class="code-pro mt-7">{{ translate('useLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://brawlegends-data.netlify.app/"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('useMsg') }}
-                      </a>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('useLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://brawlegends-data.netlify.app/"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('useMsg') }}
+                          </a>
 
-                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://github.com/TLucas97/brawstars-data-project/"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('repoMsg') }}
-                      </a>
-                    </div>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('repoLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://github.com/TLucas97/brawstars-data-project/"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('repoMsg') }}
+                          </a>
+                        </div>
+                      </v-col>
+                    </v-row>
                   </div>
                   <v-row class="pt-7">
                     <v-col class="d-flex justify-center align-center">
@@ -687,39 +762,55 @@
                 <v-col v-if="project_5" class="smooth-white-box mr-6">
                   <div class="modal-content pt-4 pb-4">
                     <h1 class="text-center code-pro">Weather App</h1>
-                    <hr class="modal-line" />
-                    <div class="d-flex justify-center align-center">
-                      <img
-                        src="~/static/img/weather.png"
-                        class="mt-4 mb-4"
-                        style="max-width: 60%"
-                      />
-                    </div>
-                    <div>
-                      <h2 class="code-pro">{{ translate('descriptionLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <p class="code-pro">
-                        {{ translate('descriptionWeather') }}
-                      </p>
-                      <h2 class="code-pro mt-7">{{ translate('techLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <v-icon x-large color="yellow"
-                        >mdi-language-javascript</v-icon
-                      >
-                      <v-icon x-large color="red">mdi-language-html5</v-icon>
-                      <v-icon x-large color="blue">mdi-language-css3</v-icon>
-                      <v-icon x-large color="green">mdi-vuejs</v-icon>
+                    <hr class="modal-line mb-6" />
+                    <v-row>
+                      <v-col>
+                        <div class="d-flex justify-center align-center">
+                          <img
+                            src="~/static/img/weather.png"
+                            class="mt-4 mb-4"
+                            style="max-width: 60%"
+                          />
+                        </div>
+                      </v-col>
+                      <v-col>
+                        <div>
+                          <h2 class="code-pro">
+                            {{ translate('descriptionLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <p class="code-pro">
+                            {{ translate('descriptionWeather') }}
+                          </p>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('techLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <v-icon x-large color="yellow"
+                            >mdi-language-javascript</v-icon
+                          >
+                          <v-icon x-large color="red"
+                            >mdi-language-html5</v-icon
+                          >
+                          <v-icon x-large color="blue"
+                            >mdi-language-css3</v-icon
+                          >
+                          <v-icon x-large color="green">mdi-vuejs</v-icon>
 
-                      <h2 class="code-pro mt-7">{{ translate('repoLabel') }}</h2>
-                      <hr class="mb-2 mt-2" />
-                      <a
-                        target="_blank"
-                        href="https://github.com/TLucas97/clima-weather-app"
-                        class="font-weight-bold"
-                      >
-                        {{ translate('repoMsg') }}
-                      </a>
-                    </div>
+                          <h2 class="code-pro mt-7">
+                            {{ translate('repoLabel') }}
+                          </h2>
+                          <hr class="mb-2 mt-2" />
+                          <a
+                            target="_blank"
+                            href="https://github.com/TLucas97/clima-weather-app"
+                            class="font-weight-bold"
+                          >
+                            {{ translate('repoMsg') }}
+                          </a>
+                        </div>
+                      </v-col>
+                    </v-row>
                   </div>
                   <v-row class="pt-7">
                     <v-col class="d-flex justify-center align-center">
