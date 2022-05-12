@@ -1015,7 +1015,7 @@ span {
 .smooth-white-box {
   width: 70%;
   margin: 0 auto;
-  padding: 1.7em;
+  padding: 1.4em;
   background: rgba(128, 128, 128, 0.24);
   border-radius: 25px;
   -webkit-box-shadow: 0px 9px 18px -3px rgba(0, 0, 0, 0.4);
