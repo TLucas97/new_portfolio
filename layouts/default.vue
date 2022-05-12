@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <mobile-layolt class="d-md-none" />
-    <desktop-layolt class="d-sm-none d-md-block" />
+    <desktop-layolt class="d-sm-none d-md-block visibility-600" />
     <Nuxt />
   </v-app>
 </template>
@@ -31,5 +31,11 @@ a {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 600px){
+  .visibility-600{
+    display: none;
+  }
 }
 </style>
