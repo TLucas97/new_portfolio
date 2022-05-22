@@ -194,7 +194,7 @@
             </v-row>
           </div>
         </div>
-        <tech-icons class="forced-none" />
+        <tech-icons :tech_title="translate('techTitle')"  class="forced-none" />
         <div class="pt-10">
           <h1 class="code-pro">{{ translate('othersTitle') }}</h1>
           <hr class="line" />

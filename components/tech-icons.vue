@@ -1,6 +1,6 @@
 <template>
   <div class="pt-10 d-xs-none">
-    <h1 id="techs" class="code-pro">Tecnologias</h1>
+    <h1 id="techs" class="code-pro">{{ tech_title }}</h1>
     <hr class="line" />
     <div class="pt-7">
       <v-row>
@@ -53,3 +53,11 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    tech_title: String,
+  }
+}
+</script>
