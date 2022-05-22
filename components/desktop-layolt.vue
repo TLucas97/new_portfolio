@@ -145,7 +145,7 @@
           </a>
         </div>
         <div>
-          <a href="#">
+          <a target="_blank" href="./Resume-Tarcisio-Almeida.pdf">
             <v-btn
               color="#E1E1E1"
               width="210"
@@ -224,7 +224,7 @@
                     <h1 class="text-center code-pro">Covid Tracker</h1>
                     <hr class="modal-line mb-6" />
                     <v-row>
-                      <v-col>
+                      <v-col cols="7">
                         <div>
                           <img
                             src="~/static/img/covid-tracker.png"
@@ -359,7 +359,7 @@
                     <h1 class="text-center code-pro">Harry Potter Wiki</h1>
                     <hr class="modal-line mb-6" />
                     <v-row>
-                      <v-col>
+                      <v-col cols="7">
                         <div>
                           <img
                             src="~/static/img/potter-wiki.png"
@@ -501,7 +501,7 @@
                     </h1>
                     <hr class="modal-line mb-6" />
                     <v-row>
-                      <v-col>
+                      <v-col cols="7">
                         <div>
                           <img
                             src="~/static/img/urna.png"
@@ -625,7 +625,7 @@
                     <h1 class="text-center code-pro">BrawlStars Data</h1>
                     <hr class="modal-line mb-6" />
                     <v-row>
-                      <v-col>
+                      <v-col cols="7">
                         <div>
                           <img
                             src="~/static/img/braw.png"
@@ -764,7 +764,7 @@
                     <h1 class="text-center code-pro">Weather App</h1>
                     <hr class="modal-line mb-6" />
                     <v-row>
-                      <v-col>
+                      <v-col cols="7">
                         <div class="d-flex justify-center align-center">
                           <img
                             src="~/static/img/weather.png"
@@ -1064,7 +1064,7 @@ span {
 }
 
 .modal-content {
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 

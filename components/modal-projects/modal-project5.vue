@@ -9,30 +9,44 @@
       />
     </div>
     <div>
-      <h2 class="code-pro">Descrição</h2>
+      <h2 class="code-pro">{{ description_title }}</h2>
       <hr class="mb-2 mt-2" />
       <p class="code-pro">
-        - Aplicativo web que fornece dados de clima baseado na sua pesquisa
+        {{ description }}
       </p>
-      <h2 class="code-pro mt-7">Tecnologias</h2>
+      <h2 class="code-pro mt-7">{{ tech_title }}</h2>
       <hr class="mb-2 mt-2" />
       <v-icon x-large color="yellow">mdi-language-javascript</v-icon>
       <v-icon x-large color="red">mdi-language-html5</v-icon>
       <v-icon x-large color="blue">mdi-language-css3</v-icon>
       <v-icon x-large color="green">mdi-vuejs</v-icon>
 
-      <h2 class="code-pro mt-7">Repositório</h2>
+      <h2 class="code-pro mt-7">{{repo_title }}</h2>
       <hr class="mb-2 mt-2" />
       <a
         target="_blank"
         href="https://github.com/TLucas97/clima-weather-app"
         class="font-weight-bold"
       >
-        Clique aqui para acessar
+        {{ repo_msg }}
       </a>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    description_title: String,
+    description: String,
+    tech_title: String,
+    use_title: String,
+    use_msg: String,
+    repo_title: String,
+    repo_msg: String,
+  },
+}
+</script>
 
 <style scoped>
 .modal-content {

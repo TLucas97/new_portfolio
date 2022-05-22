@@ -8,8 +8,7 @@ export default {
   
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Tarcisio Portfolio',
-    title: 'my_portfolio',
+    titleTemplate: 'Tarcísio Almeida',
     htmlAttrs: {
       lang: 'en',
     },

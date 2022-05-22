@@ -1,14 +1,21 @@
 <template>
   <div id="header">
     <div id="home"></div>
-    <v-card class="mx-auto overflow-hidden pb-16" :class="dark_mode" style="border-radius: 0;">
+    <v-card
+      class="mx-auto overflow-hidden pb-16"
+      :class="dark_mode"
+      style="border-radius: 0"
+    >
       <v-app-bar class="app-bar-fixed" :class="dark_mode">
         <div
           class="d-flex align-center justify-space-between"
           style="width: 100%"
         >
           <div class="d-flex align-center">
-            <v-app-bar-nav-icon :class="dark_mode" @click="drawer = true"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon
+              :class="dark_mode"
+              @click="drawer = true"
+            ></v-app-bar-nav-icon>
             <h5 class="code-pro" @click="translate('subText1')">
               {{ translate('mainName') }}
             </h5>
@@ -18,7 +25,9 @@
             <v-menu offset-y close-on-click>
               <template #activator="{ on }">
                 <v-btn elevation="0" text v-on="on">
-                  <span class="pr-2" :class="dark_mode">{{ translate('currentName') }}</span>
+                  <span class="pr-2" :class="dark_mode">{{
+                    translate('currentName')
+                  }}</span>
                   <img :src="translate('currentFlag')" alt="" width="20" />
                   <v-icon :class="dark_mode" right> mdi-chevron-down </v-icon>
                 </v-btn>
@@ -78,7 +87,7 @@
               <v-icon>mdi-github</v-icon>
             </v-btn>
           </a>
-          <a href="#">
+          <a target="blank" href="mailto:tarcisio_almeida197@gmail.com">
             <v-btn
               dark
               width="210"
@@ -89,15 +98,17 @@
               <v-icon>mdi-account-box</v-icon>
             </v-btn>
           </a>
-          <v-btn
-            dark
-            width="210"
-            height="55"
-            class="mb-5 text-h5 d-flex justify-space-between"
-          >
-            <span>{{ translate('socialsCV') }}</span>
-            <v-icon>mdi-file-account</v-icon>
-          </v-btn>
+          <a target="_blank" href="./Resume-Tarcisio-Almeida.pdf">
+            <v-btn
+              dark
+              width="210"
+              height="55"
+              class="mb-5 text-h5 d-flex justify-space-between"
+            >
+              <span>{{ translate('socialsCV') }}</span>
+              <v-icon>mdi-file-account</v-icon>
+            </v-btn>
+          </a>
         </div>
       </div>
       <div class="pt-16 profile-content">
@@ -128,7 +139,8 @@
             <v-row>
               <v-col
                 ><h4 class="code-pro pb-4">
-                  <v-icon :class="dark_mode">mdi-language-javascript</v-icon> Javascript
+                  <v-icon :class="dark_mode">mdi-language-javascript</v-icon>
+                  Javascript
                 </h4></v-col
               >
               <v-col
@@ -299,7 +311,7 @@
             </a>
             <v-list-item @click="darkMode">
               <v-list-item-icon>
-                <v-icon :class="dark_mode">mdi-{{lightbulb}}</v-icon>
+                <v-icon :class="dark_mode">mdi-{{ lightbulb }}</v-icon>
               </v-list-item-icon>
               <v-list-item-title :class="dark_mode">
                 Dark mode
@@ -326,11 +338,57 @@
                   >Projetos</v-toolbar-title
                 >
               </v-toolbar>
-              <modal-project1 v-show="modals.modal_1" />
-              <modal-project2 v-show="modals.modal_2" />
-              <modal-project3 v-show="modals.modal_3" />
-              <modal-project4 v-show="modals.modal_4" />
-              <modal-project5 v-show="modals.modal_5" />
+              <modal-project1
+                v-show="modals.modal_1"
+                :description_title="translate('descriptionLabel')"
+                :description="translate('descriptionTracker')"
+                :tech_title="translate('techLabel')"
+                :use_title="translate('useLabel')"
+                :use_msg="translate('useMsg')"
+                :repo_title="translate('repoLabel')"
+                :repo_msg="translate('repoMsg')"
+              />
+              <modal-project2
+                v-show="modals.modal_2"
+                :description_title="translate('descriptionLabel')"
+                :description="translate('descriptionPotter')"
+                :tech_title="translate('techLabel')"
+                :use_title="translate('useLabel')"
+                :use_msg="translate('useMsg')"
+                :repo_title="translate('repoLabel')"
+                :repo_msg="translate('repoMsg')"
+              />
+              <modal-project3
+                v-show="modals.modal_3"
+                :description_title="translate('descriptionLabel')"
+                :description="translate('descriptionUrn')"
+                :tech_title="translate('techLabel')"
+                :use_title="translate('useLabel')"
+                :use_msg="translate('useMsg')"
+                :repo_title="translate('repoLabel')"
+                :repo_msg="translate('repoMsg')"
+                :urn_title="translate('urnName')"
+              />
+              <modal-project4
+                v-show="modals.modal_4"
+                :description_title="translate('descriptionLabel')"
+                :description="translate('descriptionBrawl')"
+                :tech_title="translate('techLabel')"
+                :use_title="translate('useLabel')"
+                :use_msg="translate('useMsg')"
+                :repo_title="translate('repoLabel')"
+                :repo_msg="translate('repoMsg')"
+              />
+              <modal-project5
+                v-show="modals.modal_5"
+                :description_title="translate('descriptionLabel')"
+                :description="translate('descriptionWeather')"
+                :tech_title="translate('techLabel')"
+                :use_title="translate('useLabel')"
+                :use_msg="translate('useMsg')"
+                :repo_title="translate('repoLabel')"
+                :repo_msg="translate('repoMsg')"
+              />
             </v-card>
           </v-dialog>
         </v-row>
@@ -347,6 +405,8 @@ import ptbr from '../mixins/pt-br.js'
 export default {
   mixins: [en, ptbr],
   data: () => ({
+    test: 'que isso cara',
+    test1: 'que isso caralho',
     currentIndex: 0,
     lightbulb: 'lightbulb-on',
     dark_mode: '',
@@ -427,10 +487,13 @@ export default {
       }
     },
     darkMode() {
-      if (this.dark_mode === '' && this.lightbulb === 'lightbulb-on'){
+      if (this.dark_mode === '' && this.lightbulb === 'lightbulb-on') {
         this.dark_mode = 'dark-mode'
         this.lightbulb = 'lightbulb-off'
-      } else if (this.dark_mode === 'dark-mode' && this.lightbulb === 'lightbulb-off'){
+      } else if (
+        this.dark_mode === 'dark-mode' &&
+        this.lightbulb === 'lightbulb-off'
+      ) {
         this.dark_mode = ''
         this.lightbulb = 'lightbulb-on'
       }

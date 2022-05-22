@@ -9,13 +9,12 @@
       />
     </div>
     <div>
-      <h2 class="code-pro">Descrição</h2>
+      <h2 class="code-pro">{{ description_title }}</h2>
       <hr class="mb-2 mt-2" />
       <p class="code-pro">
-        - Aplicativo web que fornece dados de personagens, magias, livros,
-        filmes da saga Harry Potter dos filmes e livros.
+        {{ description }}
       </p>
-      <h2 class="code-pro mt-7">Tecnologias</h2>
+      <h2 class="code-pro mt-7">{{ tech_title }}</h2>
       <hr class="mb-2 mt-2" />
       <v-icon x-large color="yellow">mdi-language-javascript</v-icon>
       <v-icon x-large color="red">mdi-language-html5</v-icon>
@@ -23,28 +22,42 @@
       <v-icon x-large color="green">mdi-vuejs</v-icon>
       <v-icon x-large color="blue">mdi-vuetify</v-icon>
 
-      <h2 class="code-pro mt-7">Uso</h2>
+      <h2 class="code-pro mt-7">{{ use_title }}</h2>
       <hr class="mb-2 mt-2" />
       <a
         target="_blank"
         href="https://potter-wiki.netlify.app/"
         class="font-weight-bold"
       >
-        Clique aqui para testar (Disponível apenas para desktop)
+        {{ use_msg }}
       </a>
 
-      <h2 class="code-pro mt-7">Repositório</h2>
+      <h2 class="code-pro mt-7">{{ repo_title }}</h2>
       <hr class="mb-2 mt-2" />
       <a
         target="_blank"
         href="https://github.com/TLucas97/hp-data-project"
         class="font-weight-bold"
       >
-        Clique aqui para acessar
+        {{ repo_msg }}
       </a>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    description_title: String,
+    description: String,
+    tech_title: String,
+    use_title: String,
+    use_msg: String,
+    repo_title: String,
+    repo_msg: String,
+  },
+}
+</script>
 
 <style scoped>
 .modal-content {
